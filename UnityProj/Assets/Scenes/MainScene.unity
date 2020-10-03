@@ -128,6 +128,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1644708999, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644708999, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776459025, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776459025, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889219463, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889219463, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2130325147858542182, guid: edbefe95cf6766d4292bb4601c605156,
         type: 3}
       propertyPath: m_LocalPosition.x
