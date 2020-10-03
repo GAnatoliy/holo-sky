@@ -1,0 +1,3 @@
+# Empty .gitignore, don't add any rows here.
+# We use .gitignore files per child folders since unity project and plugins require totally different gitignore.
+# This file is just placeholder since some tools (e.g. Resharper) try to add default .gitignore if don't see any in root.
