@@ -1,0 +1,389 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f18fec9b55c4f818e284af454161962, type: 3}
+  m_Name: CustomMRSpeechCommandsProfile
+  m_EditorClassIdentifier: 
+  isCustomProfile: 1
+  startBehavior: 0
+  recognitionConfidenceLevel: 1
+  speechCommands:
+  - localizationKey: 
+    keyword: Menu
+    keyCode: 51
+    action:
+      id: 2
+      description: Menu
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Select
+    keyCode: 49
+    action:
+      id: 1
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Zoom In
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Zoom Out
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Recenter
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Locations
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Move Map
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Rotate Map
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Resize Map
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Adjustment Done
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Adjust Map
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Map Options
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Done
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Toggle projections
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Toggle landscape
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Show Diagnostics
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Hide Diagnostics
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: North
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: West
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: East
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: South
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Open map
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: GPS Placemark
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Up
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Right
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Down
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Left
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Confirm
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Back
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Detect Position
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Super Zoom
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Default Position
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Skip Calibration
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Cancel
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Add voice note
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Retake picture
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Send
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Re-record voice note
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Capture GNSS
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Close
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Show dev menu
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Replace image
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Remove voice note
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Toggle buildings
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Toggle custom buildings
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Toggle esri maps
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Toggle bing maps
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Toggle street maps
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Open scene
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Close scene
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Open help
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Layers
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Close map
+    keyCode: 0
+    action:
+      id: 0
+      description: Select
+      axisConstraint: 2
