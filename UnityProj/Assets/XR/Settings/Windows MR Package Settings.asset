@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8148195653374630009
+--- !u!114 &-5733794914893200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,27 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
-  m_Name: Metro Settings
+  m_Script: {fileID: 11500000, guid: 3a6c5bd16b42a1542ad52d1d47746bdb, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  m_LoaderManagerInstance: {fileID: -4792452642574902970}
-  m_InitManagerOnStart: 0
---- !u!114 &-4792452642574902970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
-  m_Name: Metro Providers
-  m_EditorClassIdentifier: 
-  m_RequiresSettingsUpdate: 0
-  m_AutomaticLoading: 0
-  m_AutomaticRunning: 0
-  m_Loaders: []
+  UsePrimaryWindowForDisplay: 0
+  HolographicRemoting: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,9 +23,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2dc886499c26824283350fa532d087d, type: 3}
-  m_Name: XRGeneralSettings
+  m_Script: {fileID: 11500000, guid: e679265d16d650945812b915bb9d5cc3, type: 3}
+  m_Name: Windows MR Package Settings
   m_EditorClassIdentifier: 
   Keys: 0e000000
   Values:
-  - {fileID: -8148195653374630009}
+  - {fileID: 6959975486042018220}
+  BuildValues:
+  - {fileID: -5733794914893200}
+--- !u!114 &6959975486042018220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed912223f7b3af74d8e196b2a4e662b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DepthBufferFormat: 0
+  UseSharedDepthBuffer: 0

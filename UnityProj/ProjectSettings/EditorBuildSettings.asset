@@ -8,6 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Interaction.unity
     guid: e81dbd5a610cc684fadcccf69763995a
+  - enabled: 0
+    path: Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandInteractionExamples.unity
+    guid: 3dd4a396b5225f8469b9a1eb608bfa57
   m_configObjects:
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 26742e3c96a62124e807b9adf13a229d,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 94371d3880f386c4ca2cf63fd9ce55ad,
       type: 2}
