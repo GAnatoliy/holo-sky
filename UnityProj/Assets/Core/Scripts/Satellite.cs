@@ -56,7 +56,7 @@ namespace Assets.Core.Scripts
         {
             var tleISS = ParserTLE.parseTle(TleLine1, TleLine2, TleLine0);
             var currentTime = new EpochTime(DateTime.UtcNow);
-            var data = One_Sgp4.SatFunctions.getSatPositionAtTime(tleISS, currentTime, Sgp4.wgsConstant.WGS_84);
+            var data = SatFunctions.getSatPositionAtTime(tleISS, currentTime, Sgp4.wgsConstant.WGS_84);
             var secondsFromStart = (currentTime.getEpoch() - Math.Truncate(currentTime.getEpoch())) * 24 * 60 * 60;
             var omega = OMEGA_E * secondsFromStart;
 
@@ -76,6 +76,14 @@ namespace Assets.Core.Scripts
             GpsUtils.EcefToGeodetic(ecr[0, 0], ecr[1, 0], ecr[2, 0], out var lat, out var lon, out var h);
 
             return new GeoCoordinate(lat, lon, h);
+        }
+
+        public bool IsVisibleFromPointNow(GeoCoordinate observer)
+        {
+            var tleISS = ParserTLE.parseTle(TleLine1, TleLine2, TleLine0);
+            var currentTime = new EpochTime(DateTime.UtcNow);
+            var data = One_Sgp4.SatFunctions.getSatPositionAtTime(tleISS, currentTime, Sgp4.wgsConstant.WGS_84);
+            return SatFunctions.isSatVisible(new Coordinate(observer.Latitude, observer.Longitude, observer.Altitude), 0, currentTime, data);
         }
     }
 }
