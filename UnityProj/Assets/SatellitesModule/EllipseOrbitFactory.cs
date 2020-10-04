@@ -32,10 +32,10 @@ public class EllipseOrbitFactory : MonoBehaviour
         var a = 6.6228f / Mathf.Pow(sixth, 2.0f / 3.0f);
         var b = Mathf.Sqrt((-(third * third) + 1) * a * a);
         Debug.LogWarning($"{a} - {b}");
-        var metersPerUnit = SatelitesManager.EARTH_RADIUS_IN_METERS / 20.0f;
+        var metersPerUnit = SatelitesWorldSpaceLoader.EARTH_RADIUS_IN_METERS / 20.0f;
 
-        a = a * SatelitesManager.EARTH_RADIUS_IN_METERS;
-        b = b * SatelitesManager.EARTH_RADIUS_IN_METERS;
+        a = a * SatelitesWorldSpaceLoader.EARTH_RADIUS_IN_METERS;
+        b = b * SatelitesWorldSpaceLoader.EARTH_RADIUS_IN_METERS;
 
         Ellipse.CreateEllipse("1", Container, Container.position, a / metersPerUnit, b / metersPerUnit, first, second, 0, 800);
     }
