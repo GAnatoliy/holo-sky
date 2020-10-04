@@ -232,7 +232,7 @@ PrefabInstance:
     - target: {fileID: 2130325147858770942, guid: edbefe95cf6766d4292bb4601c605156,
         type: 3}
       propertyPath: m_Name
-      value: EarthHigh
+      value: Earth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
