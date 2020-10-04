@@ -181,11 +181,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd90393c7eeecb245b9a43d8ec1da139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatelitePrefab: {fileID: 8558861498534078293, guid: e2af0d7ba3286d24aba0efe1cf1c9e3d,
+  SatelitePointPrefab: {fileID: 8558861498534078293, guid: e2af0d7ba3286d24aba0efe1cf1c9e3d,
+    type: 3}
+  SateliteWorldPrefab: {fileID: 1651251435136812, guid: 90c2e2ff9fd3fd444a2eb0fe70d68ae1,
     type: 3}
   Container: {fileID: 629465401}
+  SceneContainer: {fileID: 453890478}
   Origin: {fileID: 480642899}
   EarthCollider: {fileID: 635687760}
+--- !u!1 &453890477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453890478}
+  m_Layer: 0
+  m_Name: SceneContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453890478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453890477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &480642898
 PrefabInstance:
   m_ObjectHideFlags: 0
