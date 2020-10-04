@@ -150,7 +150,7 @@ Transform:
   m_Children:
   - {fileID: 822409978}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &334511580
 GameObject:
@@ -194,7 +194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &349483775
 GameObject:
@@ -226,6 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68794c1775ca89e4685df6011682ae12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _infoCardPrefab: {fileID: 2637603290052426611, guid: b80bc396dc2b83e4182c06ccd2c959c9,
+    type: 3}
 --- !u!4 &349483777
 Transform:
   m_ObjectHideFlags: 0
@@ -238,7 +240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &349483778
 MonoBehaviour:
@@ -252,20 +254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0fb9d63a5f40b42a6c90db4b0c1133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sutnik: {fileID: 1343517464735492064, guid: 03921a36bd0a86f4e8ac6f3cac88efc0, type: 3}
-  EarthCenter: {fileID: 645914689}
---- !u!1 &645914688 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2130325147858835474, guid: edbefe95cf6766d4292bb4601c605156,
-    type: 3}
-  m_PrefabInstance: {fileID: 860985459}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &645914689 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2130325147858561190, guid: edbefe95cf6766d4292bb4601c605156,
-    type: 3}
-  m_PrefabInstance: {fileID: 860985459}
-  m_PrefabAsset: {fileID: 0}
+  Sputnik: {fileID: 1343517464735492064, guid: 03921a36bd0a86f4e8ac6f3cac88efc0, type: 3}
+  EarthCenter: {fileID: 921500395}
 --- !u!1001 &777683123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -316,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 5794609936948669540, guid: 4ff8d76f536585040be24fe816aeb333,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5794609936948669540, guid: 4ff8d76f536585040be24fe816aeb333,
         type: 3}
@@ -557,6 +547,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
+--- !u!4 &921500395 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5794609936948669540, guid: 4ff8d76f536585040be24fe816aeb333,
+    type: 3}
+  m_PrefabInstance: {fileID: 777683123}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1155308107 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 1449711522215314787, guid: 4ff8d76f536585040be24fe816aeb333,
@@ -659,43 +655,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1746329850 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2130325147858770942, guid: edbefe95cf6766d4292bb4601c605156,
-    type: 3}
-  m_PrefabInstance: {fileID: 860985459}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1746329852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746329850}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  states: {fileID: 11400000, guid: 5eac1712038236e4b8ffdb3893804fe1, type: 2}
-  InputActionId: 0
-  isGlobal: 0
-  Dimensions: 1
-  dimensionIndex: 0
-  startDimensionIndex: 0
-  CanSelect: 1
-  CanDeselect: 1
-  VoiceCommand: 
-  voiceRequiresFocus: 1
-  profiles:
-  - Target: {fileID: 645914688}
-    Themes:
-    - {fileID: 11400000, guid: 37d16d53e4633e24b97d223856a7f6c9, type: 2}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  Events: []
-  resetOnDestroy: 0
-  enabledOnStart: 1
