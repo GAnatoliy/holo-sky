@@ -123,9 +123,9 @@ namespace Assets.Core.Scripts
             var satellitesTextFile = Resources.Load<TextAsset>(SatellitesResourcePath);
             string satellitesJson = satellitesTextFile.text;
 
-            var satellites = JsonUtility.FromJson<SattelitesDto>(satellitesJson);
+            var satellitesDto = JsonUtility.FromJson<SattelitesDto>(satellitesJson);
 
-            _satellites = satellites.data.Select(dto => new Satellite
+            var satellites = satellitesDto.data.Select(dto => new Satellite
             {
                 CcsdsOmmVers = dto.CCSDS_OMM_VERS,
                 Comment = dto.COMMENT,
@@ -171,6 +171,15 @@ namespace Assets.Core.Scripts
                 Description = dto.DESCRIPTION
             }).ToList();
 
+            _satellites = new List<Satellite>();
+            foreach (var satellite in satellites) {
+                // NOTE: At this moment doesn't pass this check at the Sgp4.cs, so we temporary ignore such data.    
+                try {
+                    satellite.GetGeodeticCoordinateNow();
+                    _satellites.Add(satellite);
+                } catch {
+                }
+            }
             return _satellites;
         }
     }

@@ -20,6 +20,8 @@ namespace Assets.Core.Scripts
             var satellites = dataObjectsProvider.GetSatellites();
 
             Debug.Log($"Number of satellites {satellites.Count}, id of the first one is {satellites.First().NoradCatId}, {satellites.First().ObjectName}");
+
+            satellites.ForEach(s => s.GetGeodeticCoordinateNow());
         }
 
         // Update is called once per frame
