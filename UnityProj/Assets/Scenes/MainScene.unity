@@ -161,6 +161,7 @@ MonoBehaviour:
   GroundStationPrefab: {fileID: 4480486541697525170, guid: 5c584ade136a5ed4e95c0db7e1fd78e7,
     type: 3}
   Container: {fileID: 629465401}
+  EarthCollider: {fileID: 1971217191}
 --- !u!4 &452009961
 Transform:
   m_ObjectHideFlags: 0
@@ -590,3 +591,9 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!135 &1971217191 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 480642907, guid: edbefe95cf6766d4292bb4601c605156,
+    type: 3}
+  m_PrefabInstance: {fileID: 480642898}
+  m_PrefabAsset: {fileID: 0}
