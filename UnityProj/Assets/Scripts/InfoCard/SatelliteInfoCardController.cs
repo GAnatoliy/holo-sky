@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Reflection;
+using System.Text;
 using Assets.Core.Scripts;
 using Microsoft.MixedReality.Toolkit.UI;
 using TMPro;
@@ -58,11 +59,16 @@ namespace Assets.Scripts.InfoCard
         private void FillDescription(Satellite model)
         {
             var t = model.GetType();
-            foreach (var a in t.GetFields(BindingFlags.Instance | BindingFlags.NonPublic)) {
+
+            FieldInfo[] finfos = model.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+            //foreach (var a in t.GetFields(BindingFlags.Instance | BindingFlags.NonPublic)) {
+            foreach (var a in finfos) {
                 try {
                     var field = Instantiate(_textFiled);
 
-                    field.gameObject.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = a.Name;
+                    field.gameObject.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = GetName(a.Name);
+                    ;
                     field.gameObject.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = a.GetValue(model).ToString();
 
                     field.transform.SetParent(_content, false);
@@ -70,6 +76,14 @@ namespace Assets.Scripts.InfoCard
                     Debug.LogException(e);
                 }
             }
+        }
+
+        private string GetName(string text)
+        {
+            int startChar = text.IndexOf('<');
+            int endChar = text.IndexOf('>');
+
+            return text.Substring(startChar+1, endChar-1);
         }
 
         private IEnumerator LoadImage(string url)

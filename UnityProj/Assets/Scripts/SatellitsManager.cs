@@ -18,20 +18,20 @@ namespace Assets.Scripts
 
         private void Start()
         {
-            //int c = 0;
-            //var gsProvider = new DataObjectsProvider();
-            //var groundStations = gsProvider.GetSatellites();
+            int c = 0;
+            var gsProvider = new DataObjectsProvider();
+            var groundStations = gsProvider.GetSatellites();
 
-            //foreach (var gs in groundStations) {
-            //    var gsInstance = Instantiate(Sputnik);
-            //    gsInstance.name = gs.ObjectId;
+            foreach (var gs in groundStations) {
+                var gsInstance = Instantiate(Sputnik);
+                gsInstance.name = gs.ObjectId;
 
-            //    var satellite = gsInstance.AddComponent<SatelliteObject>();
-            //    satellite.Init(gs, EarthCenter);
-            //    satellite.OnStationSelected(OnSatelliteSelected);
+                var satellite = gsInstance.AddComponent<SatelliteObject>();
+                satellite.Init(gs, EarthCenter);
+                satellite.OnStationSelected(OnSatelliteSelected);
 
-            //    _statellits.Add(gs.ObjectId, satellite);
-            //}
+                _statellits.Add(gs.ObjectId, satellite);
+            }
         }
 
         public void UndohilightObject(string id)
