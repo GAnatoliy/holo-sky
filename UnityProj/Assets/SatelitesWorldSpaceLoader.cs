@@ -11,8 +11,7 @@ public class SatelitesWorldSpaceLoader : MonoBehaviour
 
     public const float EARTH_RADIUS_IN_METERS = 6378137;
 
-    private List<GameObject> _satelites = new List<GameObject>();
-    
+    private List<GameObject> _satelites = new List<GameObject>();   
 
     public void ShowSatelitesInPoint(Vector3 point)
     {
@@ -23,25 +22,23 @@ public class SatelitesWorldSpaceLoader : MonoBehaviour
         var sphericalGeocoordinate = new GeoCoordinate(latLon.x, latLon.y);
 
         var gsProvider = new DataObjectsProvider();
-        var satelites = gsProvider.GetSatellites().Where(sat => sat.IsVisibleFromPointNow(sphericalGeocoordinate));
+        var satelites = gsProvider.GetSatellites().Where(sat => sat.IsVisibleFromPointNow(sphericalGeocoordinate)).Take(3).ToArray();
 
-        foreach (var satelite in satelites)
+        var cameraMain = Camera.main.transform;
+
+        var positions = new Vector3[3]
         {
-            var worldSatelite = CreateWorldSatelite($"{satelite.ObjectName}");
+            cameraMain.forward + new Vector3(40f, 7f, 30f),
+            cameraMain.forward + new Vector3(25f, 7f, 30f),
+            cameraMain.forward + new Vector3(5f, 7f, 20f),
+        };
 
-            var sateliteCoord = satelite.GetGeodeticCoordinateNow();
-
-            var altitude = sateliteCoord.Altitude / EARTH_RADIUS_IN_METERS;
-
-            var lat = Mathf.Clamp((float)sateliteCoord.Latitude, -90, 90);
-            var lon = Mathf.Clamp((float)sateliteCoord.Longitude, -180, 180);
-            var localPos = Quaternion.Euler(new Vector3(-lat, -lon)) * new Vector3(0, 0, (float)altitude);
-
-            worldSatelite.transform.position = localPos;
+        for(var i = 0; i < satelites.Length; i++)
+        {           
+            var worldSatelite = CreateWorldSatelite($"{satelites[i].ObjectName}");
+            worldSatelite.transform.position = positions[i];
         }
     }
-
-
 
 
     private GameObject CreateWorldSatelite(string name)
