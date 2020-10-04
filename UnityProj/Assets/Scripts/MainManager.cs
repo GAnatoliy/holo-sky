@@ -5,16 +5,21 @@ namespace Assets.Scripts
 {
     public class MainManager : MonoBehaviour
     {
+        [SerializeField]
+        private GameObject _infoCardPrefab;
+
+        private SputniksManager _sputnikManager;
+
         // Start is called before the first frame update
         void Start()
         {
-        
+            _sputnikManager = GetComponent<SputniksManager>();
+            _sputnikManager.SputnikSelected(CreateInfoCard);
         }
 
-        // Update is called once per frame
-        void Update()
+        private void CreateInfoCard(int sputnikId)
         {
-        
+            Debug.Log($"Click to sputnik, id:{sputnikId}");
         }
     }
 }
