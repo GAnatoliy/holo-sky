@@ -266,6 +266,7 @@ MonoBehaviour:
     type: 3}
   Container: {fileID: 629465401}
   EarthCollider: {fileID: 635687760}
+  OrbitFactory: {fileID: 452009963}
 --- !u!4 &480642899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 102957443446304458, guid: 4ff8d76f536585040be24fe816aeb333,

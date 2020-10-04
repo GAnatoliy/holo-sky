@@ -7,7 +7,7 @@ namespace Assets.Scripts
 {
     public class SatelliteObject : MonoBehaviour
     {
-        private Satellite _model;
+        public Satellite _model;
 
         private SatellitedSelectEvent _satelliteSelectedEvent = new SatellitedSelectEvent();
 

@@ -9,6 +9,7 @@ public class EarthSateliteLoader : MonoBehaviour
     public GameObject SatelitePointPrefab;
     public Transform Container;
     public SphereCollider EarthCollider;
+    public EllipseOrbitFactory OrbitFactory;
 
     public const float EARTH_RADIUS_IN_METERS = 6378137;
 
@@ -32,10 +33,12 @@ public class EarthSateliteLoader : MonoBehaviour
             var satelite = CreateSatelite($"{sat.ObjectName}");
             var sateliteData = sat.GetGeodeticCoordinateNow();
 
+            satelite.GetComponent<ClipableHandler>().OrbitFactory = OrbitFactory;
 
             var satellite = satelite.gameObject.AddComponent<SatelliteObject>();
             satellite.Init(sat);
             satellite.OnStationSelected(OnSatelliteSelected);
+
 
             _statellits.Add(sat.ObjectId, satellite);
 
