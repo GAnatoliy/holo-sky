@@ -1,6 +1,7 @@
 ﻿using Assets.Core.Scripts;
 using Assets.Core.Scripts.Dtos;
 using Assets.Scripts.InfoCard;
+using Microsoft.MixedReality.Toolkit.UI.BoundsControl;
 using UnityEngine;
 
 
@@ -20,6 +21,8 @@ namespace Assets.Scripts
         private GameObject _instantedInfoCard;
 
         private Transform _camera;
+
+        public GameObject Earth;
 
         // Start is called before the first frame update
         void Start()
@@ -67,6 +70,14 @@ namespace Assets.Scripts
             });
 
             //_groundStationManager.HilightObject(model.Id);
+        }
+
+        public void OnRotationButtonClick()
+        {
+            var state = !Earth.GetComponent<BoundsControl>().enabled;
+
+            Earth.GetComponent<BoundsControl>().enabled = state;
+            Earth.transform.Find("Pivot").GetComponent<BoxCollider>().enabled = state;
         }
     }
 }
