@@ -372,6 +372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2130325147858542182}
+  - component: {fileID: 907266257}
   m_Layer: 0
   m_Name: EarthHigh
   m_TagString: Untagged
@@ -395,6 +396,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 23.5, y: 0, z: 0}
+--- !u!114 &907266257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130325147858770942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77d8f5497a4b5246ac29a4fbc5e0630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SatelitesManager: {fileID: 0}
 --- !u!1 &2130325147858835474
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,6 +421,7 @@ GameObject:
   - component: {fileID: 2130325147855661778}
   - component: {fileID: 2130325147856550412}
   - component: {fileID: 3935003813638680631}
+  - component: {fileID: 480642907}
   m_Layer: 0
   m_Name: Planet16128Tris
   m_TagString: Untagged
@@ -491,3 +506,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Acceleration: 1
+--- !u!135 &480642907
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130325147858835474}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20.195032
+  m_Center: {x: 0, y: 0, z: 0}

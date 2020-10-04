@@ -184,7 +184,6 @@ MonoBehaviour:
     type: 3}
   Container: {fileID: 629465401}
   Origin: {fileID: 907266256}
-  Equator: {fileID: 480642899}
 --- !u!1001 &480642898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -192,6 +191,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 907266257, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
+      propertyPath: SatelitesManager
+      value: 
+      objectReference: {fileID: 452009962}
     - target: {fileID: 2130325147858542182, guid: edbefe95cf6766d4292bb4601c605156,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -254,31 +257,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edbefe95cf6766d4292bb4601c605156, type: 3}
---- !u!4 &480642899 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1644708998, guid: edbefe95cf6766d4292bb4601c605156,
-    type: 3}
-  m_PrefabInstance: {fileID: 480642898}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &480642900 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2130325147858835474, guid: edbefe95cf6766d4292bb4601c605156,
-    type: 3}
-  m_PrefabInstance: {fileID: 480642898}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &480642907
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480642900}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 20.195032
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &557499546
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,33 +307,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 480642898}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &907266255 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2130325147858770942, guid: edbefe95cf6766d4292bb4601c605156,
-    type: 3}
-  m_PrefabInstance: {fileID: 480642898}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &907266256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2130325147858542182, guid: edbefe95cf6766d4292bb4601c605156,
     type: 3}
   m_PrefabInstance: {fileID: 480642898}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &907266257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907266255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77d8f5497a4b5246ac29a4fbc5e0630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TouchHandler: {fileID: 0}
-  PointerHandler: {fileID: 0}
-  SatelitesManager: {fileID: 452009962}
 --- !u!1 &1048243630
 GameObject:
   m_ObjectHideFlags: 0
