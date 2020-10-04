@@ -24,7 +24,7 @@ public class Ellipse : MonoBehaviour
         }
     }
 
-    public static Vector3[] CreateEllipse(float a, float b, float Cx, float Cy, float Cz, float angleZ, float angleY, float angleX, int resolution)
+    private static Vector3[] CreateEllipse(float a, float b, float Cx, float Cy, float Cz, float angleZ, float angleY, float angleX, int resolution)
     {
         var positions = new Vector3[resolution + 1];
         var qX = Quaternion.AngleAxis(90 + angleX, Vector3.right);
