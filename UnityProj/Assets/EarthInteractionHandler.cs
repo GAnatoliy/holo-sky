@@ -4,7 +4,8 @@ using UnityEngine;
 public class EarthInteractionHandler : MonoBehaviour
 {
     public SatelitesManager SatelitesManager;
-
+    public EarthRotationAccelerator EarthRotationAccelerator;
+    public EarthSpin EarthSpin;
     private GameObject _touchPoint;
 
     private void Start()
@@ -14,6 +15,8 @@ public class EarthInteractionHandler : MonoBehaviour
 #else
         gameObject.AddComponent<PointerHandler>().OnPointerClicked.AddListener(HandleClick);
 #endif
+
+        EarthRotationAccelerator.AccelerationChanged.AddListener(accel => EarthSpin.Acceleration = accel);
     }
 
 

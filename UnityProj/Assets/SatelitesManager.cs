@@ -13,34 +13,34 @@ public class SatelitesManager : MonoBehaviour
 
     private List<GeoObject> _satelites = new List<GeoObject>();
 
-    // Temporary satelites coordinates stub
-    private List<Vector2> _stubSatelites = new List<Vector2>
+    private void Start()
     {
-        new Vector2(47.583204f, 29.588764f),
-        new Vector2(32.769229f, 42.884609f),
-        new Vector2(51.163797f, 71.396299f)
-    };
+        ShowAllSatelites();
+    }
 
     public void ShowSatelitesInPoint(Vector3 point)
     {
-        RemoveAllSatelites();
-
         var local = Origin.transform.InverseTransformPoint(point);
         var latLon = ToSpherical(local);
 
-        foreach (var sat in _stubSatelites)
+
+    }
+
+    private void ShowAllSatelites()
+    {
+        var gsProvider = new DataObjectsProvider();
+        var satelites = gsProvider.GetSatellites();
+
+        foreach (var sat in satelites)
         {
-            var satelite = CreateSatelite($"satelite_{_satelites.Count + 1}");
+            var satelite = CreateSatelite($"{sat.ObjectName}");
+            var sateliteData = sat.GetGeodeticCoordinateNow();
 
-            var sateliteCoordinate = new GeoCoordinate(sat.x, sat.y);
-            var convertedSpherical = new GeoCoordinate(latLon.x, latLon.y);
-
-            var distance = GeoCoordinate.Distance(sateliteCoordinate, convertedSpherical);
-            var altitude = Mathf.Clamp((float)distance / 1000 / 5000, 1, 20);
-
-            satelite.SetCoordinates(sat.x, sat.y, altitude);
+            var altitude = sateliteData.Altitude / EarthCollider.radius / EARTH_RADIUS_IN_METERS;
+            satelite.SetCoordinates(sateliteData.Latitude, sateliteData.Longitude, altitude);
         }
     }
+
 
     private GeoObject CreateSatelite(string name)
     {
@@ -49,10 +49,10 @@ public class SatelitesManager : MonoBehaviour
         satelite.name = !string.IsNullOrEmpty(name) ? name : "Satelite";
         var sateliteObj = satelite.AddComponent<GeoObject>();
         sateliteObj.EarthObjectRadius = EarthCollider.radius;
-        _satelites.Add(sateliteObj);
-
         return sateliteObj;
     }
+
+
 
     private void RemoveAllSatelites()
     {
