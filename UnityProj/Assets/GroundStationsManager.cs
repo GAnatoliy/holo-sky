@@ -9,7 +9,7 @@ public class GroundStationsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var gsProvider = new GroundStationsProvider();
+        var gsProvider = new DataObjectsProvider();
         var groundStations = gsProvider.GetGroundStations();
 
         foreach (var gs in groundStations)

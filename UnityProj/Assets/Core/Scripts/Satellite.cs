@@ -45,6 +45,8 @@ namespace Assets.Core.Scripts
         public string TleLine0 { get; set; }
         public string TleLine1 { get; set; }
         public string TleLine2 { get; set; }
+        public string ImageUrl { get; set; }
+        public string Description { get; set; }
     }
 
 }

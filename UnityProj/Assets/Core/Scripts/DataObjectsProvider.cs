@@ -79,6 +79,8 @@ namespace Assets.Core.Scripts
         public string TLE_LINE0;
         public string TLE_LINE1;
         public string TLE_LINE2;
+        public string IMAGE_URL;
+        public string DESCRIPTION;
     }
 
     public class DataObjectsProvider
@@ -150,7 +152,9 @@ namespace Assets.Core.Scripts
                 GpId = dto.GP_ID,
                 TleLine0 = dto.TLE_LINE0,
                 TleLine1 = dto.TLE_LINE1,
-                TleLine2 = dto.TLE_LINE2
+                TleLine2 = dto.TLE_LINE2,
+                ImageUrl = dto.IMAGE_URL,
+                Description = dto.DESCRIPTION
             }).ToList();
         }
     }
