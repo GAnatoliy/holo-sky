@@ -1,0 +1,1716 @@
+{
+  "GroundStations": [
+    {
+      "Id": "SPA",
+      "Name": "South Pole",
+      "Location": {
+        "Latitude": "-89.98999786376953",
+        "Longitude": "-13.319999694824219"
+      }
+    },
+    {
+      "Id": "MCM",
+      "Name": "McMurdo",
+      "Location": {
+        "Latitude": "-77.8499984741211",
+        "Longitude": "166.6999969482422"
+      }
+    },
+    {
+      "Id": "SBF",
+      "Name": "Scott Base",
+      "Location": {
+        "Latitude": "-77.8499984741211",
+        "Longitude": "166.75"
+      }
+    },
+    {
+      "Id": "SPL",
+      "Name": "Siple",
+      "Location": {
+        "Latitude": "-76.0",
+        "Longitude": "-84.0"
+      }
+    },
+    {
+      "Id": "HBA",
+      "Name": "Halley Bay",
+      "Location": {
+        "Latitude": "-75.5199966430664",
+        "Longitude": "-26.600000381469727"
+      }
+    },
+    {
+      "Id": "MZH",
+      "Name": "Mizuho",
+      "Location": {
+        "Latitude": "-70.43000030517578",
+        "Longitude": "40.20000076293945"
+      }
+    },
+    {
+      "Id": "SYO",
+      "Name": "Syowa",
+      "Location": {
+        "Latitude": "-69.01000213623047",
+        "Longitude": "39.59000015258789"
+      }
+    },
+    {
+      "Id": "MAF",
+      "Name": "Mawson",
+      "Location": {
+        "Latitude": "-67.62000274658203",
+        "Longitude": "62.88999938964844"
+      }
+    },
+    {
+      "Id": "FRZ",
+      "Name": "Ferraz",
+      "Location": {
+        "Latitude": "-62.08000183105469",
+        "Longitude": "-58.38999938964844"
+      }
+    },
+    {
+      "Id": "POS",
+      "Name": "Port Stanley",
+      "Location": {
+        "Latitude": "-51.599998474121094",
+        "Longitude": "-57.900001525878906"
+      }
+    },
+    {
+      "Id": "CCF",
+      "Name": "Christchurch",
+      "Location": {
+        "Latitude": "-43.83000183105469",
+        "Longitude": "172.67999267578125"
+      }
+    },
+    {
+      "Id": "ADF",
+      "Name": "Adelaide",
+      "Location": {
+        "Latitude": "-34.560001373291016",
+        "Longitude": "138.47999572753906"
+      }
+    },
+    {
+      "Id": "CTO",
+      "Name": "Cape Town",
+      "Location": {
+        "Latitude": "-33.95000076293945",
+        "Longitude": "18.469999313354492"
+      }
+    },
+    {
+      "Id": "TUN",
+      "Name": "Tucuman",
+      "Location": {
+        "Latitude": "-26.899999618530273",
+        "Longitude": "-65.4000015258789"
+      }
+    },
+    {
+      "Id": "CAP",
+      "Name": "Cachoeira Paulista",
+      "Location": {
+        "Latitude": "-23.200000762939453",
+        "Longitude": "-45.79999923706055"
+      }
+    },
+    {
+      "Id": "CAG",
+      "Name": "Campo Grande",
+      "Location": {
+        "Latitude": "-20.5",
+        "Longitude": "-55.0"
+      }
+    },
+    {
+      "Id": "AQF",
+      "Name": "Arequipa",
+      "Location": {
+        "Latitude": "-16.5",
+        "Longitude": "-71.5"
+      }
+    },
+    {
+      "Id": "HUA",
+      "Name": "Huancayo",
+      "Location": {
+        "Latitude": "-12.050000190734863",
+        "Longitude": "-75.33999633789062"
+      }
+    },
+    {
+      "Id": "JRO",
+      "Name": "Jicamarca",
+      "Location": {
+        "Latitude": "-11.899999618530273",
+        "Longitude": "-76.0"
+      }
+    },
+    {
+      "Id": "ASI",
+      "Name": "Ascension Island",
+      "Location": {
+        "Latitude": "-7.900000095367432",
+        "Longitude": "-14.399999618530273"
+      }
+    },
+    {
+      "Id": "CAC",
+      "Name": "Cachimbo",
+      "Location": {
+        "Latitude": "-9.5",
+        "Longitude": "-54.79999923706055"
+      }
+    },
+    {
+      "Id": "FOR",
+      "Name": "Forteleza",
+      "Location": {
+        "Latitude": "-3.799999952316284",
+        "Longitude": "-38.5"
+      }
+    },
+    {
+      "Id": "SAL",
+      "Name": "Sao Luis",
+      "Location": {
+        "Latitude": "-2.5999999046325684",
+        "Longitude": "-44.599998474121094"
+      }
+    },
+    {
+      "Id": "CIA",
+      "Name": "Christmas Island",
+      "Location": {
+        "Latitude": "1.9500000476837158",
+        "Longitude": "-157.3000030517578"
+      }
+    },
+    {
+      "Id": "BOV",
+      "Name": "Boa Vista",
+      "Location": {
+        "Latitude": "2.799999952316284",
+        "Longitude": "-60.70000076293945"
+      }
+    },
+    {
+      "Id": "KGO",
+      "Name": "Korhogo",
+      "Location": {
+        "Latitude": "9.300000190734863",
+        "Longitude": "-5.400000095367432"
+      }
+    },
+    {
+      "Id": "GUA",
+      "Name": "Guam",
+      "Location": {
+        "Latitude": "13.579999923706055",
+        "Longitude": "144.8699951171875"
+      }
+    },
+    {
+      "Id": "ARO",
+      "Name": "Arecibo",
+      "Location": {
+        "Latitude": "18.299999237060547",
+        "Longitude": "-66.75"
+      }
+    },
+    {
+      "Id": "SJG",
+      "Name": "San Juan",
+      "Location": {
+        "Latitude": "18.3799991607666",
+        "Longitude": "-66.12000274658203"
+      }
+    },
+    {
+      "Id": "TEO",
+      "Name": "Teoloyucan",
+      "Location": {
+        "Latitude": "19.739999771118164",
+        "Longitude": "99.19000244140625"
+      }
+    },
+    {
+      "Id": "HON",
+      "Name": "Honolulu",
+      "Location": {
+        "Latitude": "21.31999969482422",
+        "Longitude": "-158.05999755859375"
+      }
+    },
+    {
+      "Id": "LYFD",
+      "Name": "MaC_Lyford",
+      "Location": {
+        "Latitude": "26.399999618530273",
+        "Longitude": "-97.80000305175781"
+      }
+    },
+    {
+      "Id": "FIT",
+      "Name": "Florida Tech.",
+      "Location": {
+        "Latitude": "28.06999969482422",
+        "Longitude": "-80.94999694824219"
+      }
+    },
+    {
+      "Id": "SATX",
+      "Name": "MaC_SanAntonio",
+      "Location": {
+        "Latitude": "29.399999618530273",
+        "Longitude": "-98.5999984741211"
+      }
+    },
+    {
+      "Id": "JAX",
+      "Name": "Jacksonville Univ.",
+      "Location": {
+        "Latitude": "30.350000381469727",
+        "Longitude": "-81.5999984741211"
+      }
+    },
+    {
+      "Id": "SLU",
+      "Name": "SE Louisiana Univ.",
+      "Location": {
+        "Latitude": "30.440000534057617",
+        "Longitude": "-90.7300033569336"
+      }
+    },
+    {
+      "Id": "TUC",
+      "Name": "Tucson",
+      "Location": {
+        "Latitude": "32.25",
+        "Longitude": "-110.83000183105469"
+      }
+    },
+    {
+      "Id": "RICH",
+      "Name": "MaC_Richardson",
+      "Location": {
+        "Latitude": "33.0",
+        "Longitude": "-96.80000305175781"
+      }
+    },
+    {
+      "Id": "USC",
+      "Name": "Univ. S. Carolina",
+      "Location": {
+        "Latitude": "33.34000015258789",
+        "Longitude": "-81.45999908447266"
+      }
+    },
+    {
+      "Id": "MUI",
+      "Name": "Shigaraki",
+      "Location": {
+        "Latitude": "34.79999923706055",
+        "Longitude": "136.10000610351562"
+      }
+    },
+    {
+      "Id": "PCEL",
+      "Name": "MaC_Purcell",
+      "Location": {
+        "Latitude": "35.0",
+        "Longitude": "-97.19999694824219"
+      }
+    },
+    {
+      "Id": "LAL",
+      "Name": "Los Alamos",
+      "Location": {
+        "Latitude": "35.880001068115234",
+        "Longitude": "-106.66999816894531"
+      }
+    },
+    {
+      "Id": "KAK",
+      "Name": "Kakioka",
+      "Location": {
+        "Latitude": "36.22999954223633",
+        "Longitude": "140.19000244140625"
+      }
+    },
+    {
+      "Id": "DSO",
+      "Name": "Dark Sky Obs.",
+      "Location": {
+        "Latitude": "36.25",
+        "Longitude": "-81.4000015258789"
+      }
+    },
+    {
+      "Id": "STFD",
+      "Name": "Stanford",
+      "Location": {
+        "Latitude": "37.400001525878906",
+        "Longitude": "-122.19999694824219"
+      }
+    },
+    {
+      "Id": "BERK",
+      "Name": "THM_Berkeley",
+      "Location": {
+        "Latitude": "37.88100051879883",
+        "Longitude": "-122.24400329589844"
+      }
+    },
+    {
+      "Id": "WLPS",
+      "Name": "Wallops",
+      "Location": {
+        "Latitude": "37.900001525878906",
+        "Longitude": "-75.4000015258789"
+      }
+    },
+    {
+      "Id": "ASH",
+      "Name": "Ashkhabad",
+      "Location": {
+        "Latitude": "37.95000076293945",
+        "Longitude": "58.11000061035156"
+      }
+    },
+    {
+      "Id": "FRD",
+      "Name": "USGS Fredericksburg",
+      "Location": {
+        "Latitude": "38.20000076293945",
+        "Longitude": "-77.4000015258789"
+      }
+    },
+    {
+      "Id": "PBLO",
+      "Name": "Pueblo",
+      "Location": {
+        "Latitude": "38.29999923706055",
+        "Longitude": "-104.5999984741211"
+      }
+    },
+    {
+      "Id": "ONW",
+      "Name": "Onagawa",
+      "Location": {
+        "Latitude": "38.43000030517578",
+        "Longitude": "141.47000122070312"
+      }
+    },
+    {
+      "Id": "AMER",
+      "Name": "MaC_Americus",
+      "Location": {
+        "Latitude": "38.5",
+        "Longitude": "-96.30000305175781"
+      }
+    },
+    {
+      "Id": "AFA",
+      "Name": "USAFA Colorado",
+      "Location": {
+        "Latitude": "39.0099983215332",
+        "Longitude": "-104.87999725341797"
+      }
+    },
+    {
+      "Id": "LREL",
+      "Name": "Laurel",
+      "Location": {
+        "Latitude": "39.099998474121094",
+        "Longitude": "-76.80000305175781"
+      }
+    },
+    {
+      "Id": "APL",
+      "Name": "Applied Physics Lab.",
+      "Location": {
+        "Latitude": "39.16999816894531",
+        "Longitude": "-76.87999725341797"
+      }
+    },
+    {
+      "Id": "CCNV",
+      "Name": "THM_Carson City",
+      "Location": {
+        "Latitude": "39.189998626708984",
+        "Longitude": "-119.77999877929688"
+      }
+    },
+    {
+      "Id": "GDN",
+      "Name": "Golden",
+      "Location": {
+        "Latitude": "39.75",
+        "Longitude": "-105.16000366210938"
+      }
+    },
+    {
+      "Id": "UIL",
+      "Name": "Urbana",
+      "Location": {
+        "Latitude": "40.099998474121094",
+        "Longitude": "-88.0999984741211"
+      }
+    },
+    {
+      "Id": "PLA",
+      "Name": "Platteville",
+      "Location": {
+        "Latitude": "40.130001068115234",
+        "Longitude": "-104.5"
+      }
+    },
+    {
+      "Id": "BLD",
+      "Name": "Boulder",
+      "Location": {
+        "Latitude": "40.130001068115234",
+        "Longitude": "-105.23999786376953"
+      }
+    },
+    {
+      "Id": "BOU",
+      "Name": "Boulder",
+      "Location": {
+        "Latitude": "40.13999938964844",
+        "Longitude": "-105.23999786376953"
+      }
+    },
+    {
+      "Id": "LOYS",
+      "Name": "THM_Loysburg",
+      "Location": {
+        "Latitude": "40.16999816894531",
+        "Longitude": "-78.37999725341797"
+      }
+    },
+    {
+      "Id": "CSL",
+      "Name": "Ft Collins",
+      "Location": {
+        "Latitude": "40.59000015258789",
+        "Longitude": "-105.13999938964844"
+      }
+    },
+    {
+      "Id": "TKT",
+      "Name": "Tashkent",
+      "Location": {
+        "Latitude": "41.33000183105469",
+        "Longitude": "69.62000274658203"
+      }
+    },
+    {
+      "Id": "BENN",
+      "Name": "MaC_Bennington",
+      "Location": {
+        "Latitude": "41.400001525878906",
+        "Longitude": "-96.19999694824219"
+      }
+    },
+    {
+      "Id": "USI",
+      "Name": "Bear Lake",
+      "Location": {
+        "Latitude": "41.400001525878906",
+        "Longitude": "-111.5"
+      }
+    },
+    {
+      "Id": "TFS",
+      "Name": "Tbilisi",
+      "Location": {
+        "Latitude": "42.09000015258789",
+        "Longitude": "44.709999084472656"
+      }
+    },
+    {
+      "Id": "WES",
+      "Name": "Weston",
+      "Location": {
+        "Latitude": "42.380001068115234",
+        "Longitude": "-71.31999969482422"
+      }
+    },
+    {
+      "Id": "PFP",
+      "Name": "Peach Mountain",
+      "Location": {
+        "Latitude": "42.400001525878906",
+        "Longitude": "-86.93000030517578"
+      }
+    },
+    {
+      "Id": "MLH",
+      "Name": "Millstone Hill",
+      "Location": {
+        "Latitude": "42.599998474121094",
+        "Longitude": "-71.4800033569336"
+      }
+    },
+    {
+      "Id": "PINE",
+      "Name": "THM_Pine Ridge",
+      "Location": {
+        "Latitude": "43.11000061035156",
+        "Longitude": "-102.5999984741211"
+      }
+    },
+    {
+      "Id": "DUM",
+      "Name": "Durham",
+      "Location": {
+        "Latitude": "43.119998931884766",
+        "Longitude": "-70.94000244140625"
+      }
+    },
+    {
+      "Id": "AAA",
+      "Name": "Alma-Ata",
+      "Location": {
+        "Latitude": "43.20000076293945",
+        "Longitude": "76.9000015258789"
+      }
+    },
+    {
+      "Id": "WRTH",
+      "Name": "MaC_Worthington",
+      "Location": {
+        "Latitude": "43.599998474121094",
+        "Longitude": "-95.5999984741211"
+      }
+    },
+    {
+      "Id": "RMUS",
+      "Name": "THM_Remus",
+      "Location": {
+        "Latitude": "43.599998474121094",
+        "Longitude": "-85.16000366210938"
+      }
+    },
+    {
+      "Id": "GTF",
+      "Name": "Grafton Test Facility",
+      "Location": {
+        "Latitude": "43.619998931884766",
+        "Longitude": "-71.94999694824219"
+      }
+    },
+    {
+      "Id": "CLK",
+      "Name": "Clarkson University",
+      "Location": {
+        "Latitude": "44.70000076293945",
+        "Longitude": "-75.0"
+      }
+    },
+    {
+      "Id": "SWNO",
+      "Name": "THM_Shawano",
+      "Location": {
+        "Latitude": "44.779998779296875",
+        "Longitude": "-88.5999984741211"
+      }
+    },
+    {
+      "Id": "DRBY",
+      "Name": "THM_Derby",
+      "Location": {
+        "Latitude": "44.95000076293945",
+        "Longitude": "-72.12999725341797"
+      }
+    },
+    {
+      "Id": "UKIA",
+      "Name": "THM_Ukiah",
+      "Location": {
+        "Latitude": "45.130001068115234",
+        "Longitude": "-118.93000030517578"
+      }
+    },
+    {
+      "Id": "OTT",
+      "Name": "Ottawa",
+      "Location": {
+        "Latitude": "45.400001525878906",
+        "Longitude": "-75.5"
+      }
+    },
+    {
+      "Id": "HRIS",
+      "Name": "Harris",
+      "Location": {
+        "Latitude": "45.599998474121094",
+        "Longitude": "-93.0"
+      }
+    },
+    {
+      "Id": "NKK",
+      "Name": "Novokazalinsk",
+      "Location": {
+        "Latitude": "45.79999923706055",
+        "Longitude": "62.099998474121094"
+      }
+    },
+    {
+      "Id": "FYTS",
+      "Name": "THM_Fort Yates",
+      "Location": {
+        "Latitude": "46.09000015258789",
+        "Longitude": "-100.6500015258789"
+      }
+    },
+    {
+      "Id": "BMLS",
+      "Name": "THM_Bay Mills",
+      "Location": {
+        "Latitude": "46.2400016784668",
+        "Longitude": "-84.33999633789062"
+      }
+    },
+    {
+      "Id": "GLYN",
+      "Name": "MaC_Glyndon",
+      "Location": {
+        "Latitude": "46.900001525878906",
+        "Longitude": "-96.5"
+      }
+    },
+    {
+      "Id": "STJ",
+      "Name": "St. Johns",
+      "Location": {
+        "Latitude": "47.59000015258789",
+        "Longitude": "-52.68000030517578"
+      }
+    },
+    {
+      "Id": "HOTS",
+      "Name": "THM_Hot Springs",
+      "Location": {
+        "Latitude": "47.59000015258789",
+        "Longitude": "-114.66000366210938"
+      }
+    },
+    {
+      "Id": "NEW",
+      "Name": "Newport",
+      "Location": {
+        "Latitude": "48.2599983215332",
+        "Longitude": "-117.12000274658203"
+      }
+    },
+    {
+      "Id": "VIC",
+      "Name": "Victoria",
+      "Location": {
+        "Latitude": "48.52000045776367",
+        "Longitude": "-123.41999816894531"
+      }
+    },
+    {
+      "Id": "KAPU",
+      "Name": "THM_Kapuskasing",
+      "Location": {
+        "Latitude": "49.38999938964844",
+        "Longitude": "-82.31999969482422"
+      }
+    },
+    {
+      "Id": "GLL",
+      "Name": "Glenlea",
+      "Location": {
+        "Latitude": "49.599998474121094",
+        "Longitude": "-97.0999984741211"
+      }
+    },
+    {
+      "Id": "CHBG",
+      "Name": "THM_Chibougamau",
+      "Location": {
+        "Latitude": "49.810001373291016",
+        "Longitude": "-74.41999816894531"
+      }
+    },
+    {
+      "Id": "KGD",
+      "Name": "Karaganda",
+      "Location": {
+        "Latitude": "49.81999969482422",
+        "Longitude": "73.08000183105469"
+      }
+    },
+    {
+      "Id": "DOU",
+      "Name": "Dourbes",
+      "Location": {
+        "Latitude": "50.099998474121094",
+        "Longitude": "4.599999904632568"
+      }
+    },
+    {
+      "Id": "PINA",
+      "Name": "THM_Pinawa",
+      "Location": {
+        "Latitude": "50.15999984741211",
+        "Longitude": "-96.06999969482422"
+      }
+    },
+    {
+      "Id": "PNW",
+      "Name": "Pinawa",
+      "Location": {
+        "Latitude": "50.20000076293945",
+        "Longitude": "-96.04000091552734"
+      }
+    },
+    {
+      "Id": "KIV",
+      "Name": "Kiev",
+      "Location": {
+        "Latitude": "50.720001220703125",
+        "Longitude": "30.299999237060547"
+      }
+    },
+    {
+      "Id": "RDL",
+      "Name": "Red Lake",
+      "Location": {
+        "Latitude": "50.900001525878906",
+        "Longitude": "-93.5"
+      }
+    },
+    {
+      "Id": "COF",
+      "Name": "Collm",
+      "Location": {
+        "Latitude": "52.0",
+        "Longitude": "15.0"
+      }
+    },
+    {
+      "Id": "SHF",
+      "Name": "Saskatoon",
+      "Location": {
+        "Latitude": "52.15999984741211",
+        "Longitude": "-106.52999877929688"
+      }
+    },
+    {
+      "Id": "IRT",
+      "Name": "Irkutsk",
+      "Location": {
+        "Latitude": "52.459999084472656",
+        "Longitude": "104.04000091552734"
+      }
+    },
+    {
+      "Id": "GBAY",
+      "Name": "THM_Goose Bay",
+      "Location": {
+        "Latitude": "53.31999969482422",
+        "Longitude": "-60.459999084472656"
+      }
+    },
+    {
+      "Id": "NIP",
+      "Name": "Nipawin",
+      "Location": {
+        "Latitude": "53.5",
+        "Longitude": "-103.69999694824219"
+      }
+    },
+    {
+      "Id": "PGEO",
+      "Name": "THM_Prince George",
+      "Location": {
+        "Latitude": "53.81999969482422",
+        "Longitude": "-122.83000183105469"
+      }
+    },
+    {
+      "Id": "ISL",
+      "Name": "Island Lake",
+      "Location": {
+        "Latitude": "53.880001068115234",
+        "Longitude": "-94.68000030517578"
+      }
+    },
+    {
+      "Id": "TPAS",
+      "Name": "THM_Flin Flon/The Pas",
+      "Location": {
+        "Latitude": "53.9900016784668",
+        "Longitude": "-100.94000244140625"
+      }
+    },
+    {
+      "Id": "MEA",
+      "Name": "Meanook",
+      "Location": {
+        "Latitude": "54.619998931884766",
+        "Longitude": "-112.33000183105469"
+      }
+    },
+    {
+      "Id": "KNG",
+      "Name": "Kaliningrad",
+      "Location": {
+        "Latitude": "54.70000076293945",
+        "Longitude": "20.6200008392334"
+      }
+    },
+    {
+      "Id": "ATHA",
+      "Name": "THM_Athabasca",
+      "Location": {
+        "Latitude": "54.709999084472656",
+        "Longitude": "-113.30999755859375"
+      }
+    },
+    {
+      "Id": "NVS",
+      "Name": "Novosibirsk",
+      "Location": {
+        "Latitude": "55.029998779296875",
+        "Longitude": "82.9000015258789"
+      }
+    },
+    {
+      "Id": "PBQ",
+      "Name": "Poste_Baleine",
+      "Location": {
+        "Latitude": "55.27000045776367",
+        "Longitude": "-77.75"
+      }
+    },
+    {
+      "Id": "ESK",
+      "Name": "Eskdalemuir",
+      "Location": {
+        "Latitude": "55.31999969482422",
+        "Longitude": "-3.200000047683716"
+      }
+    },
+    {
+      "Id": "MOS",
+      "Name": "Moscow",
+      "Location": {
+        "Latitude": "55.47999954223633",
+        "Longitude": "37.310001373291016"
+      }
+    },
+    {
+      "Id": "GILL",
+      "Name": "THM_Gillam",
+      "Location": {
+        "Latitude": "56.349998474121094",
+        "Longitude": "-94.66000366210938"
+      }
+    },
+    {
+      "Id": "TMK",
+      "Name": "Tomsk",
+      "Location": {
+        "Latitude": "56.470001220703125",
+        "Longitude": "84.93000030517578"
+      }
+    },
+    {
+      "Id": "NAIN",
+      "Name": "THM_Nain",
+      "Location": {
+        "Latitude": "56.5",
+        "Longitude": "-61.70000076293945"
+      }
+    },
+    {
+      "Id": "SNKQ",
+      "Name": "THM_Sanikiluaq",
+      "Location": {
+        "Latitude": "56.540000915527344",
+        "Longitude": "-79.2300033569336"
+      }
+    },
+    {
+      "Id": "FMM",
+      "Name": "Fort McMurray",
+      "Location": {
+        "Latitude": "56.72999954223633",
+        "Longitude": "-111.37999725341797"
+      }
+    },
+    {
+      "Id": "SVD",
+      "Name": "Sverdlovsk",
+      "Location": {
+        "Latitude": "56.72999954223633",
+        "Longitude": "61.06999969482422"
+      }
+    },
+    {
+      "Id": "PTRS",
+      "Name": "THM_Petersburg",
+      "Location": {
+        "Latitude": "56.83000183105469",
+        "Longitude": "-133.16000366210938"
+      }
+    },
+    {
+      "Id": "GIM",
+      "Name": "Gillam",
+      "Location": {
+        "Latitude": "56.849998474121094",
+        "Longitude": "-94.41999816894531"
+      }
+    },
+    {
+      "Id": "LYN",
+      "Name": "Lynn Lake",
+      "Location": {
+        "Latitude": "56.849998474121094",
+        "Longitude": "-101.06999969482422"
+      }
+    },
+    {
+      "Id": "SIT",
+      "Name": "Sitka",
+      "Location": {
+        "Latitude": "57.04999923706055",
+        "Longitude": "-135.3300018310547"
+      }
+    },
+    {
+      "Id": "BKC",
+      "Name": "Back",
+      "Location": {
+        "Latitude": "57.68000030517578",
+        "Longitude": "-94.2300033569336"
+      }
+    },
+    {
+      "Id": "KODK",
+      "Name": "Kodiak",
+      "Location": {
+        "Latitude": "57.79999923706055",
+        "Longitude": "-152.39999389648438"
+      }
+    },
+    {
+      "Id": "RBL",
+      "Name": "Rabbit Lake",
+      "Location": {
+        "Latitude": "58.220001220703125",
+        "Longitude": "-103.66999816894531"
+      }
+    },
+    {
+      "Id": "FCC",
+      "Name": "Fort Churchill",
+      "Location": {
+        "Latitude": "58.79999923706055",
+        "Longitude": "-94.0999984741211"
+      }
+    },
+    {
+      "Id": "STM",
+      "Name": "Stockholm",
+      "Location": {
+        "Latitude": "59.5",
+        "Longitude": "18.200000762939453"
+      }
+    },
+    {
+      "Id": "UPP",
+      "Name": "Uppsala",
+      "Location": {
+        "Latitude": "59.79999923706055",
+        "Longitude": "17.600000381469727"
+      }
+    },
+    {
+      "Id": "LNN",
+      "Name": "Leningrad",
+      "Location": {
+        "Latitude": "59.95000076293945",
+        "Longitude": "30.709999084472656"
+      }
+    },
+    {
+      "Id": "FSMI",
+      "Name": "THM_Fort Smith",
+      "Location": {
+        "Latitude": "59.97999954223633",
+        "Longitude": "-111.83999633789062"
+      }
+    },
+    {
+      "Id": "FSM",
+      "Name": "Fort_Smith",
+      "Location": {
+        "Latitude": "60.0",
+        "Longitude": "-112.0"
+      }
+    },
+    {
+      "Id": "WFP",
+      "Name": "Watson Lake",
+      "Location": {
+        "Latitude": "60.060001373291016",
+        "Longitude": "-128.5800018310547"
+      }
+    },
+    {
+      "Id": "MGD",
+      "Name": "Magadan",
+      "Location": {
+        "Latitude": "60.119998931884766",
+        "Longitude": "151.02000427246094"
+      }
+    },
+    {
+      "Id": "NUR",
+      "Name": "Nurmijarvi",
+      "Location": {
+        "Latitude": "60.5099983215332",
+        "Longitude": "24.65999984741211"
+      }
+    },
+    {
+      "Id": "WHIT",
+      "Name": "THM_White Horse",
+      "Location": {
+        "Latitude": "61.0099983215332",
+        "Longitude": "-135.22000122070312"
+      }
+    },
+    {
+      "Id": "EKP",
+      "Name": "Eskimo Point",
+      "Location": {
+        "Latitude": "61.099998474121094",
+        "Longitude": "-94.06999969482422"
+      }
+    },
+    {
+      "Id": "NAQ",
+      "Name": "Narssarssuaq",
+      "Location": {
+        "Latitude": "61.099998474121094",
+        "Longitude": "-45.20000076293945"
+      }
+    },
+    {
+      "Id": "AMU",
+      "Name": "Anchorage",
+      "Location": {
+        "Latitude": "61.2400016784668",
+        "Longitude": "-149.8699951171875"
+      }
+    },
+    {
+      "Id": "POD",
+      "Name": "Podk. Tunguska",
+      "Location": {
+        "Latitude": "61.599998474121094",
+        "Longitude": "90.0"
+      }
+    },
+    {
+      "Id": "FSP",
+      "Name": "Fort_Simpson",
+      "Location": {
+        "Latitude": "61.75",
+        "Longitude": "-121.2300033569336"
+      }
+    },
+    {
+      "Id": "FSIM",
+      "Name": "THM_Fort Simpson",
+      "Location": {
+        "Latitude": "61.7599983215332",
+        "Longitude": "-121.22000122070312"
+      }
+    },
+    {
+      "Id": "YAK",
+      "Name": "Yakutsk",
+      "Location": {
+        "Latitude": "62.02000045776367",
+        "Longitude": "129.72000122070312"
+      }
+    },
+    {
+      "Id": "TLK",
+      "Name": "Talkeetna",
+      "Location": {
+        "Latitude": "62.29999923706055",
+        "Longitude": "-150.10000610351562"
+      }
+    },
+    {
+      "Id": "FHF",
+      "Name": "Hankasalmi",
+      "Location": {
+        "Latitude": "62.31999969482422",
+        "Longitude": "26.610000610351562"
+      }
+    },
+    {
+      "Id": "GAK",
+      "Name": "HAARP/Gakona",
+      "Location": {
+        "Latitude": "62.38999938964844",
+        "Longitude": "-145.14999389648438"
+      }
+    },
+    {
+      "Id": "GAKO",
+      "Name": "THM_HAARP/Gakona",
+      "Location": {
+        "Latitude": "62.40999984741211",
+        "Longitude": "-145.16000366210938"
+      }
+    },
+    {
+      "Id": "YKC",
+      "Name": "Yellowknife",
+      "Location": {
+        "Latitude": "62.400001525878906",
+        "Longitude": "-114.5"
+      }
+    },
+    {
+      "Id": "RIT",
+      "Name": "Rankin_Inlet",
+      "Location": {
+        "Latitude": "62.79999923706055",
+        "Longitude": "-92.33000183105469"
+      }
+    },
+    {
+      "Id": "RANK",
+      "Name": "THM_Rankin Inlet",
+      "Location": {
+        "Latitude": "62.83000183105469",
+        "Longitude": "-92.11000061035156"
+      }
+    },
+    {
+      "Id": "MCGR",
+      "Name": "THM_Mcgrath",
+      "Location": {
+        "Latitude": "62.95000076293945",
+        "Longitude": "-155.60000610351562"
+      }
+    },
+    {
+      "Id": "IQA",
+      "Name": "Iqaluit",
+      "Location": {
+        "Latitude": "63.79999923706055",
+        "Longitude": "-68.5999984741211"
+      }
+    },
+    {
+      "Id": "WHF",
+      "Name": "Stokkseyri",
+      "Location": {
+        "Latitude": "63.86000061035156",
+        "Longitude": "-22.020000457763672"
+      }
+    },
+    {
+      "Id": "EHF",
+      "Name": "Pykkvibaerehf",
+      "Location": {
+        "Latitude": "63.86000061035156",
+        "Longitude": "-19.200000762939453"
+      }
+    },
+    {
+      "Id": "DWC",
+      "Name": "Dawson City",
+      "Location": {
+        "Latitude": "64.06999969482422",
+        "Longitude": "-139.4199981689453"
+      }
+    },
+    {
+      "Id": "BLC",
+      "Name": "Baker Lake",
+      "Location": {
+        "Latitude": "64.33000183105469",
+        "Longitude": "-96.02999877929688"
+      }
+    },
+    {
+      "Id": "ARK",
+      "Name": "Arkhangelsk",
+      "Location": {
+        "Latitude": "64.5999984741211",
+        "Longitude": "40.5"
+      }
+    },
+    {
+      "Id": "LYS",
+      "Name": "Lycksele",
+      "Location": {
+        "Latitude": "64.62000274658203",
+        "Longitude": "18.770000457763672"
+      }
+    },
+    {
+      "Id": "HSF",
+      "Name": "Husafell",
+      "Location": {
+        "Latitude": "64.66999816894531",
+        "Longitude": "-21.030000686645508"
+      }
+    },
+    {
+      "Id": "EKAT",
+      "Name": "THM_Lac de Gras/Ekati",
+      "Location": {
+        "Latitude": "64.72000122070312",
+        "Longitude": "-109.33000183105469"
+      }
+    },
+    {
+      "Id": "CMO",
+      "Name": "College",
+      "Location": {
+        "Latitude": "64.8499984741211",
+        "Longitude": "-147.8300018310547"
+      }
+    },
+    {
+      "Id": "NOW",
+      "Name": "Norman Wells",
+      "Location": {
+        "Latitude": "64.9000015258789",
+        "Longitude": "-125.5"
+      }
+    },
+    {
+      "Id": "OUL",
+      "Name": "Oulu",
+      "Location": {
+        "Latitude": "65.0999984741211",
+        "Longitude": "25.850000381469727"
+      }
+    },
+    {
+      "Id": "COW",
+      "Name": "Contwoyto Lake",
+      "Location": {
+        "Latitude": "65.7300033569336",
+        "Longitude": "-111.25"
+      }
+    },
+    {
+      "Id": "IFJ",
+      "Name": "Isafjordur",
+      "Location": {
+        "Latitude": "66.08000183105469",
+        "Longitude": "-23.1299991607666"
+      }
+    },
+    {
+      "Id": "TJN",
+      "Name": "Tjornes",
+      "Location": {
+        "Latitude": "66.19999694824219",
+        "Longitude": "-17.1200008392334"
+      }
+    },
+    {
+      "Id": "FYKN",
+      "Name": "THM_Fort Yukon",
+      "Location": {
+        "Latitude": "66.55999755859375",
+        "Longitude": "-145.2100067138672"
+      }
+    },
+    {
+      "Id": "FYU",
+      "Name": "Fort_Yukon",
+      "Location": {
+        "Latitude": "66.56999969482422",
+        "Longitude": "-145.27000427246094"
+      }
+    },
+    {
+      "Id": "PEL",
+      "Name": "Pello",
+      "Location": {
+        "Latitude": "66.9000015258789",
+        "Longitude": "24.079999923706055"
+      }
+    },
+    {
+      "Id": "KIAN",
+      "Name": "THM_Kiana",
+      "Location": {
+        "Latitude": "66.97000122070312",
+        "Longitude": "-160.44000244140625"
+      }
+    },
+    {
+      "Id": "STF",
+      "Name": "Sondrestrom",
+      "Location": {
+        "Latitude": "67.0199966430664",
+        "Longitude": "-50.720001220703125"
+      }
+    },
+    {
+      "Id": "SOD",
+      "Name": "Sodankyla",
+      "Location": {
+        "Latitude": "67.37000274658203",
+        "Longitude": "26.649999618530273"
+      }
+    },
+    {
+      "Id": "SOD",
+      "Name": "ECAT-Sodankyla",
+      "Location": {
+        "Latitude": "67.37000274658203",
+        "Longitude": "26.649999618530273"
+      }
+    },
+    {
+      "Id": "KIR",
+      "Name": "Kiruna",
+      "Location": {
+        "Latitude": "67.83000183105469",
+        "Longitude": "20.420000076293945"
+      }
+    },
+    {
+      "Id": "KIR",
+      "Name": "ECAT-Kiruna",
+      "Location": {
+        "Latitude": "67.83000183105469",
+        "Longitude": "20.420000076293945"
+      }
+    },
+    {
+      "Id": "MUO",
+      "Name": "Muonio",
+      "Location": {
+        "Latitude": "68.0199966430664",
+        "Longitude": "23.530000686645508"
+      }
+    },
+    {
+      "Id": "AVI",
+      "Name": "Arctic Village",
+      "Location": {
+        "Latitude": "68.12999725341797",
+        "Longitude": "-145.57000732421875"
+      }
+    },
+    {
+      "Id": "INK",
+      "Name": "Inuvik",
+      "Location": {
+        "Latitude": "68.25",
+        "Longitude": "-133.3000030517578"
+      }
+    },
+    {
+      "Id": "INUV",
+      "Name": "THM_Inuvik",
+      "Location": {
+        "Latitude": "68.41000366210938",
+        "Longitude": "-133.77000427246094"
+      }
+    },
+    {
+      "Id": "IVA",
+      "Name": "Ivalo",
+      "Location": {
+        "Latitude": "68.5999984741211",
+        "Longitude": "27.479999542236328"
+      }
+    },
+    {
+      "Id": "ALT",
+      "Name": "Alta",
+      "Location": {
+        "Latitude": "68.9000015258789",
+        "Longitude": "22.959999084472656"
+      }
+    },
+    {
+      "Id": "CPS",
+      "Name": "Cape Schmidt",
+      "Location": {
+        "Latitude": "68.91999816894531",
+        "Longitude": "-179.47999572753906"
+      }
+    },
+    {
+      "Id": "MMK",
+      "Name": "Murmansk",
+      "Location": {
+        "Latitude": "68.94999694824219",
+        "Longitude": "33.04999923706055"
+      }
+    },
+    {
+      "Id": "KAU",
+      "Name": "Kautokeino",
+      "Location": {
+        "Latitude": "69.0199966430664",
+        "Longitude": "23.049999237060547"
+      }
+    },
+    {
+      "Id": "KIL",
+      "Name": "Kilpisjarvi",
+      "Location": {
+        "Latitude": "69.05000305175781",
+        "Longitude": "20.700000762939453"
+      }
+    },
+    {
+      "Id": "CBB",
+      "Name": "Cambridge Bay",
+      "Location": {
+        "Latitude": "69.19999694824219",
+        "Longitude": "-105.0"
+      }
+    },
+    {
+      "Id": "GDH",
+      "Name": "Godhavn",
+      "Location": {
+        "Latitude": "69.23999786376953",
+        "Longitude": "-53.52000045776367"
+      }
+    },
+    {
+      "Id": "NOK",
+      "Name": "Norilsk",
+      "Location": {
+        "Latitude": "69.4000015258789",
+        "Longitude": "88.0999984741211"
+      }
+    },
+    {
+      "Id": "AMD",
+      "Name": "Amderma",
+      "Location": {
+        "Latitude": "69.47000122070312",
+        "Longitude": "61.41999816894531"
+      }
+    },
+    {
+      "Id": "TRO",
+      "Name": "Tromso",
+      "Location": {
+        "Latitude": "69.66000366210938",
+        "Longitude": "18.950000762939453"
+      }
+    },
+    {
+      "Id": "TRO",
+      "Name": "ECAT-Tromso",
+      "Location": {
+        "Latitude": "69.66000366210938",
+        "Longitude": "18.950000762939453"
+      }
+    },
+    {
+      "Id": "KEV",
+      "Name": "Kevo",
+      "Location": {
+        "Latitude": "69.76000213623047",
+        "Longitude": "27.010000228881836"
+      }
+    },
+    {
+      "Id": "CPY",
+      "Name": "Cape Parry",
+      "Location": {
+        "Latitude": "70.16999816894531",
+        "Longitude": "-124.72000122070312"
+      }
+    },
+    {
+      "Id": "SOE",
+      "Name": "Soroya",
+      "Location": {
+        "Latitude": "70.54000091552734",
+        "Longitude": "22.219999313354492"
+      }
+    },
+    {
+      "Id": "BRW",
+      "Name": "Barrow",
+      "Location": {
+        "Latitude": "71.30000305175781",
+        "Longitude": "-156.75"
+      }
+    },
+    {
+      "Id": "TIK",
+      "Name": "Tixie Bay",
+      "Location": {
+        "Latitude": "71.58000183105469",
+        "Longitude": "129.0"
+      }
+    },
+    {
+      "Id": "SKG",
+      "Name": "Sopoch. Karga",
+      "Location": {
+        "Latitude": "71.9000015258789",
+        "Longitude": "82.0999984741211"
+      }
+    },
+    {
+      "Id": "SAH",
+      "Name": "Sachs Harbor",
+      "Location": {
+        "Latitude": "72.0",
+        "Longitude": "-125.0"
+      }
+    },
+    {
+      "Id": "DIK",
+      "Name": "Dixon Island",
+      "Location": {
+        "Latitude": "73.54000091552734",
+        "Longitude": "80.55999755859375"
+      }
+    },
+    {
+      "Id": "RES",
+      "Name": "Resolute Bay",
+      "Location": {
+        "Latitude": "74.69999694824219",
+        "Longitude": "-94.9000015258789"
+      }
+    },
+    {
+      "Id": "IZV",
+      "Name": "Izvestia",
+      "Location": {
+        "Latitude": "75.9000015258789",
+        "Longitude": "82.69999694824219"
+      }
+    },
+    {
+      "Id": "KOT",
+      "Name": "Kotelny",
+      "Location": {
+        "Latitude": "76.0",
+        "Longitude": "137.89999389648438"
+      }
+    },
+    {
+      "Id": "MBC",
+      "Name": "Mould Bay",
+      "Location": {
+        "Latitude": "76.19999694824219",
+        "Longitude": "-119.4000015258789"
+      }
+    },
+    {
+      "Id": "HRN",
+      "Name": "Hornsund",
+      "Location": {
+        "Latitude": "77.0",
+        "Longitude": "15.550000190734863"
+      }
+    },
+    {
+      "Id": "TFP",
+      "Name": "Thule",
+      "Location": {
+        "Latitude": "76.52999877929688",
+        "Longitude": "-68.44000244140625"
+      }
+    },
+    {
+      "Id": "THL",
+      "Name": "Thule/Qaanaaq",
+      "Location": {
+        "Latitude": "77.4800033569336",
+        "Longitude": "-69.16999816894531"
+      }
+    },
+    {
+      "Id": "UDN",
+      "Name": "Uedinenie",
+      "Location": {
+        "Latitude": "77.5",
+        "Longitude": "82.30000305175781"
+      }
+    },
+    {
+      "Id": "ESR",
+      "Name": "ECAT-Svalbard",
+      "Location": {
+        "Latitude": "78.1500015258789",
+        "Longitude": "16.030000686645508"
+      }
+    },
+    {
+      "Id": "VIZ",
+      "Name": "Vize",
+      "Location": {
+        "Latitude": "79.5",
+        "Longitude": "78.0999984741211"
+      }
+    },
+    {
+      "Id": "LNC",
+      "Name": "Ny Alesund",
+      "Location": {
+        "Latitude": "78.9000015258789",
+        "Longitude": "12.0"
+      }
+    },
+    {
+      "Id": "HIS",
+      "Name": "Heiss Island",
+      "Location": {
+        "Latitude": "80.62000274658203",
+        "Longitude": "58.04999923706055"
+      }
+    },
+    {
+      "Id": "NOC",
+      "Name": "Nord",
+      "Location": {
+        "Latitude": "81.5999984741211",
+        "Longitude": "-16.600000381469727"
+      }
+    },
+    {
+      "Id": "ALE",
+      "Name": "Alert",
+      "Location": {
+        "Latitude": "82.5",
+        "Longitude": "-62.5"
+      }
+    }
+  ]
+}
