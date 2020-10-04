@@ -1,17 +1,21 @@
 ﻿using Assets.Core.Scripts;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SatelitesManager : MonoBehaviour
 {
-    public GameObject SatelitePrefab;
+    public GameObject SatelitePointPrefab;
+    public GameObject SateliteWorldPrefab;
     public Transform Container;
+    public Transform SceneContainer;
     public Transform Origin;
     public SphereCollider EarthCollider;
 
     public const float EARTH_RADIUS_IN_METERS = 6378137;
 
-    private List<GeoObject> _satelites = new List<GeoObject>();
+    private List<GameObject> _satelites = new List<GameObject>();
+    
 
     private void Start()
     {
@@ -20,10 +24,27 @@ public class SatelitesManager : MonoBehaviour
 
     public void ShowSatelitesInPoint(Vector3 point)
     {
+        RemoveAllSatelites();
+
         var local = Origin.transform.InverseTransformPoint(point);
         var latLon = ToSpherical(local);
+        var sphericalGeocoordinate = new GeoCoordinate(latLon.x, latLon.y);
 
+        var gsProvider = new DataObjectsProvider();
+        var satelites = gsProvider.GetSatellites().Where(sat => sat.IsVisibleFromPointNow(sphericalGeocoordinate));
 
+        foreach(var satelite in satelites)
+        {
+            var worldSatelite = CreateWorldSatelite($"{satelite.ObjectName}");
+
+            var sateliteCoord = satelite.GetGeodeticCoordinateNow();
+
+            var lat = Mathf.Clamp((float)sateliteCoord.Latitude, -90, 90);
+            var lon = Mathf.Clamp((float)sateliteCoord.Longitude, -180, 180);
+            var localPos = Quaternion.Euler(new Vector3(-lat, -lon)) * new Vector3(0, 0, EarthCollider.radius);
+
+            worldSatelite.transform.position = localPos;
+        }
     }
 
     private void ShowAllSatelites()
@@ -41,10 +62,19 @@ public class SatelitesManager : MonoBehaviour
         }
     }
 
+    private GameObject CreateWorldSatelite(string name)
+    {
+        var satelite = Instantiate(SateliteWorldPrefab);
+        satelite.transform.SetParent(SceneContainer, false);
+        satelite.name = !string.IsNullOrEmpty(name) ? name + "_World" : "Satelite_World";
+        _satelites.Add(satelite);
+        return satelite;
+    }
+
 
     private GeoObject CreateSatelite(string name)
     {
-        var satelite = Instantiate(SatelitePrefab);
+        var satelite = Instantiate(SatelitePointPrefab);
         satelite.transform.SetParent(Container, false);
         satelite.name = !string.IsNullOrEmpty(name) ? name : "Satelite";
         var sateliteObj = satelite.AddComponent<GeoObject>();
