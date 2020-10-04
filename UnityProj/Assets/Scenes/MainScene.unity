@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd90393c7eeecb245b9a43d8ec1da139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatelitePrefab: {fileID: 1651251435136812, guid: 90c2e2ff9fd3fd444a2eb0fe70d68ae1,
+  SatelitePrefab: {fileID: 8558861498534078293, guid: e2af0d7ba3286d24aba0efe1cf1c9e3d,
     type: 3}
   Container: {fileID: 629465401}
   Origin: {fileID: 480642899}
