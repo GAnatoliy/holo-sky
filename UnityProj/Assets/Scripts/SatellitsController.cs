@@ -8,14 +8,14 @@ using Random = UnityEngine.Random;
 
 namespace Assets.Scripts
 {
-    public class SputnikController : MonoBehaviour
+    public class SatellitsController : MonoBehaviour
     {
 
         [SerializeField] private float _speed;
 
         [SerializeField] private float _radius = 1.5f;
 
-        public IntegerEvent OnSputnikClickedEvent = new IntegerEvent();
+        //public SatellitedSelectEvent OnSputnikClickedEvent = new IntegerEvent();
 
         private Transform _earth;
         private int _id;
@@ -49,7 +49,7 @@ namespace Assets.Scripts
 
         private void OnSputnikClicked()
         {
-            OnSputnikClickedEvent.Invoke(_id);
+            //OnSputnikClickedEvent.Invoke(_id);
         }
     }
 }

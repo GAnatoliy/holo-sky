@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CarryModeOutline
+  m_Name: HolographicBackPlate 1
   m_Shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-  m_ShaderKeywords: _BORDER_LIGHT _DISABLE_ALBEDO_MAP _HOVER_LIGHT _IRIDESCENCE _METALLIC_TEXTURE_ALBEDO_CHANNEL_A
-    _ROUND_CORNERS
+  m_ShaderKeywords: _BORDER_LIGHT _BORDER_LIGHT_REPLACES_ALBEDO _DISABLE_ALBEDO_MAP
+    _IRIDESCENCE _METALLIC_TEXTURE_ALBEDO_CHANNEL_A _ROUND_CORNERS
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -82,7 +82,7 @@ Material:
     - _BorderLight: 1
     - _BorderLightOpaque: 0
     - _BorderLightOpaqueAlpha: 1
-    - _BorderLightReplacesAlbedo: 0
+    - _BorderLightReplacesAlbedo: 1
     - _BorderLightUsesHoverColor: 0
     - _BorderMinValue: 0.6
     - _BorderWidth: 0.2
@@ -123,7 +123,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HoverLight: 1
+    - _HoverLight: 0
     - _HoverLightOpaque: 0
     - _IgnoreZScale: 0
     - _IndependentCorners: 0
@@ -132,7 +132,7 @@ Material:
     - _InstancedColor: 0
     - _Iridescence: 1
     - _IridescenceAngle: -0.78
-    - _IridescenceIntensity: 0.5
+    - _IridescenceIntensity: 0.75
     - _IridescenceThreshold: 0.05
     - _Metallic: 0
     - _Mode: 0
@@ -151,7 +151,7 @@ Material:
     - _RimLight: 0
     - _RimPower: 5.83
     - _RoundCornerMargin: 0
-    - _RoundCornerRadius: 0.2
+    - _RoundCornerRadius: 0.1
     - _RoundCorners: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0

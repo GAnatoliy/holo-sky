@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 public class GeoObject : MonoBehaviour
 {
     public float Latitude;
@@ -24,6 +25,7 @@ public class GeoObject : MonoBehaviour
     //}
 
     public void SetCoordinates(double latitude, double longitude, double altitude = 0)
+
     {
         var lat = Mathf.Clamp((float) latitude, -90, 90);
         var lon = Mathf.Clamp((float) longitude, -180, 180);

@@ -1,5 +1,9 @@
 ﻿using Assets.Core.Scripts;
+using Assets.Core.Scripts.Dtos;
+using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class GroundStationsManager : MonoBehaviour
 {
@@ -7,6 +11,9 @@ public class GroundStationsManager : MonoBehaviour
     public Transform Container;
     public SphereCollider EarthCollider;
 
+    private GroundStationSelectedEvent _onGroundStationSelectedEvent = new GroundStationSelectedEvent();
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +25,22 @@ public class GroundStationsManager : MonoBehaviour
             var gsInstance = Instantiate(GroundStationPrefab);
             gsInstance.name = gs.Id;
             gsInstance.transform.SetParent(Container, false);
+
             var geoObj = gsInstance.AddComponent<GeoObject>();
             geoObj.EarthObjectRadius = EarthCollider.radius;
             geoObj.SetCoordinates(gs.Location.Latitude, gs.Location.Longitude);
-        }        
+            geoObj.GetComponent<GroundStationObject>().Init(gs);
+            geoObj.GetComponent<GroundStationObject>().OnStationSelected(StationSelected);
+        }
+    }
+
+    public void OnStationSelected(UnityAction<GroundStation> handler)
+    {
+        _onGroundStationSelectedEvent.AddListener(handler);
+    }
+
+    private void StationSelected(GroundStation model)
+    {
+        _onGroundStationSelectedEvent.Invoke(model);
     }
 }
