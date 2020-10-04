@@ -1,10 +1,14 @@
 ﻿using System;
+using One_Sgp4;
 
 
 namespace Assets.Core.Scripts
 {
     public class Satellite
     {
+        // Earth angular velocity, rad/sec
+        const double OMEGA_E = 7.2921151e-5;
+
         public string CcsdsOmmVers { get; set; }
         public string Comment { get; set; }
         public DateTime CreationDate { get; set; }
@@ -47,6 +51,31 @@ namespace Assets.Core.Scripts
         public string TleLine2 { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
-    }
 
+        public GeoCoordinate GetGeodeticCoordinateNow()
+        {
+            var tleISS = ParserTLE.parseTle(TleLine1, TleLine2, TleLine0);
+            var currentTime = new EpochTime(DateTime.UtcNow);
+            var data = One_Sgp4.SatFunctions.getSatPositionAtTime(tleISS, currentTime, Sgp4.wgsConstant.WGS_84);
+            var secondsFromStart = (currentTime.getEpoch() - Math.Truncate(currentTime.getEpoch())) * 24 * 60 * 60;
+            var omega = OMEGA_E * secondsFromStart;
+
+            var C = MathNet.Numerics.LinearAlgebra.Double.DenseMatrix.OfArray(
+                new double[,] {
+                    {Math.Cos(omega), Math.Sin(omega), 0},
+                    {-Math.Sin(omega), Math.Cos(omega), 0},
+                    {0, 0, 1}});
+
+            var p = MathNet.Numerics.LinearAlgebra.Double.DenseMatrix.OfArray(
+                new double[,] {
+                    { data.getX() * 1000},
+                    { data.getY() * 1000},
+                    { data.getZ() * 1000}});
+
+            var ecr = C * p;
+            GpsUtils.EcefToGeodetic(ecr[0, 0], ecr[1, 0], ecr[2, 0], out var lat, out var lon, out var h);
+
+            return new GeoCoordinate(lat, lon, h);
+        }
+    }
 }
