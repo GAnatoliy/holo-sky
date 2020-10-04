@@ -29,5 +29,7 @@ public class GeoObject : MonoBehaviour
         var localPos = Quaternion.Euler(new Vector3(-lat, -lon)) * new Vector3(0, 0, 20.25f);
 
         transform.localPosition = localPos;
+
+        transform.LookAt(transform.parent.position);
     }
 }
