@@ -86,10 +86,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7440655176235256533}
-  - component: {fileID: 2788493323019204678}
   - component: {fileID: -2167546787681517972}
+  - component: {fileID: 3379001647725776853}
   m_Layer: 0
-  m_Name: GroundStationInfocardPrefab 1
+  m_Name: SatelliteInfocardPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,27 +110,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2788493323019204678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3075020036311171042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ee216acc273ef6429fc390a03119c7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _content: {fileID: 5760677552020225763}
-  _textFiled: {fileID: 4221429121191832803, guid: a4e375815b2246e46909d88fdd5a0cae,
-    type: 3}
-  _descriptoin: {fileID: 246030006786434850}
-  _title: {fileID: 3608413718133211015}
-  _image: {fileID: 2175112151802974104}
-  OnCloseInfoCard:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &-2167546787681517972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +124,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotAxis: 0
   targetTransform: {fileID: 0}
+--- !u!114 &3379001647725776853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3075020036311171042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e346cbfaab759f34ca9cfaccbc9d434e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _content: {fileID: 5760677552020225763}
+  _textFiled: {fileID: 4221429121191832803, guid: a4e375815b2246e46909d88fdd5a0cae,
+    type: 3}
+  _descriptoin: {fileID: 246030006786434850}
+  _title: {fileID: 3608413718133211015}
+  _image: {fileID: 2175112151802974104}
+  OnCloseInfoCard:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8466583109761863954
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +299,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2788493323019204678}
+      objectReference: {fileID: 3379001647725776853}
     - target: {fileID: 1854408757490810331, guid: cbed88032b1f56c448005d861c64497d,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName

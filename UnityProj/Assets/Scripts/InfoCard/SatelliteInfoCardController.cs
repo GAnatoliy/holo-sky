@@ -1,6 +1,8 @@
-﻿using Assets.Core.Scripts.Dtos;
-using Microsoft.MixedReality.Toolkit.UI;
+﻿using System;
 using System.Collections;
+using System.Reflection;
+using Assets.Core.Scripts;
+using Microsoft.MixedReality.Toolkit.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,7 +10,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.InfoCard
 {
-    public class InfoCardController : MonoBehaviour
+    public class SatelliteInfoCardController : MonoBehaviour 
     {
         [SerializeField]
         private Transform _content;
@@ -27,36 +29,46 @@ namespace Assets.Scripts.InfoCard
 
         public UnityEvent OnCloseInfoCard = new UnityEvent();
 
-        private GroundStation _model;
+        private Satellite _model;
 
         private void Start()
         {
             GetComponent<Billboard>().TargetTransform = Camera.main.transform;
         }
-
-        public void Init(GroundStation model)
+        
+        public void Init(Satellite model)
         {
             _model = model;
 
             FillContent(_model);
         }
-        
-        private void FillContent(GroundStation model)
-        {
-            _title.text = model.Name;
 
-            if (!string.IsNullOrEmpty(model.ImageUrl)) {
+        private void FillContent(Satellite model)
+        {
+            _title.text = model.ObjectName;
+
+            if (!string.IsNullOrEmpty(model.ImageUrl))
+            {
                 StartCoroutine(LoadImage(model.ImageUrl));
             }
 
-            FillDescription(_model.Description);
+            FillDescription(_model);
         }
 
-        private void FillDescription(string description)
+        private void FillDescription(Satellite model)
         {
-            if (!string.IsNullOrEmpty(description)) {
-                _descriptoin.transform.Find("Text").GetComponent<Text>().text = description;
-                _descriptoin.gameObject.SetActive(true);
+            var t = model.GetType();
+            foreach (var a in t.GetFields(BindingFlags.Instance | BindingFlags.NonPublic)) {
+                try {
+                    var field = Instantiate(_textFiled);
+
+                    field.gameObject.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = a.Name;
+                    field.gameObject.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = a.GetValue(model).ToString();
+
+                    field.transform.SetParent(_content, false);
+                } catch (Exception e) {
+                    Debug.LogException(e);
+                }
             }
         }
 

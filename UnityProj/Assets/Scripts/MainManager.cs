@@ -33,30 +33,40 @@ namespace Assets.Scripts
             _camera = Camera.main.transform;
         }
 
-        private void CreateInfoCard(Satellite sputnikId)
+        private void CreateInfoCard(Satellite model)
         {
-            Debug.Log($"Click to sputnik, id:{sputnikId.ObjectId}");
-
             _instantedInfoCard = Instantiate(_infoCardPrefab);
+            _instantedInfoCard.transform.position = _camera.position + new Vector3(_camera.forward.x, 0f, _camera.forward.z) * 0.5f;
 
-            _instantedInfoCard.transform.position = _camera.position + _camera.forward * 5;
+            var infoCard = _instantedInfoCard.GetComponent<SatelliteInfoCardController>();
+
+            infoCard.Init(model);
+            infoCard.OnCloseInfoCard.AddListener(() => {
+                satellitManager.UndohilightObject(model.ObjectId);
+                Destroy(_instantedInfoCard.gameObject);
+            });
+
+            //satellitManager.HilightObject(model.ObjectId);
         }
 
         private void CreateGroundStationInfoCard(GroundStation model)
         {
-            Debug.Log($"Click to ground statin, id:{model.Id}");
-
-            //if (string.IsNullOrEmpty(model.ImageUrl) && string.IsNullOrEmpty(model.Description)) {
-            //    return;
-            //}
+            if (string.IsNullOrEmpty(model.ImageUrl) && string.IsNullOrEmpty(model.Description)) {
+                return;
+            }
 
             _instantedInfoCard = Instantiate(_groundObjectInfoCardPrefab);
-
             _instantedInfoCard.transform.position = _camera.position + new Vector3(_camera.forward.x, 0f, _camera.forward.z) * 0.5f;
 
             var infoCard = _instantedInfoCard.GetComponent<InfoCardController>();
+
             infoCard.Init(model);
-            infoCard.OnCloseInfoCard.AddListener(()=> Destroy(_instantedInfoCard.gameObject));
+            infoCard.OnCloseInfoCard.AddListener(()=> {
+                _groundStationManager.UndohilightObject(model.Id);
+                Destroy(_instantedInfoCard.gameObject);
+            });
+
+            //_groundStationManager.HilightObject(model.Id);
         }
     }
 }

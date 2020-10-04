@@ -8,40 +8,40 @@ namespace Assets.Scripts
 {
     public class SatellitsManager : MonoBehaviour
     {
-        public List<Sputnik> Sputniks;
-
         public GameObject Sputnik;
 
         public Transform EarthCenter;
 
         private SatellitedSelectEvent _sputnikSelectedEvent = new SatellitedSelectEvent();
 
-        private DataObjectsProvider _dataObjectsProvider;
+        private Dictionary<string, SatelliteObject> _statellits = new Dictionary<string, SatelliteObject>();
 
         private void Start()
         {
-            int c = 0;
-            var gsProvider = new DataObjectsProvider();
-            var groundStations = gsProvider.GetSatellites();
+            //int c = 0;
+            //var gsProvider = new DataObjectsProvider();
+            //var groundStations = gsProvider.GetSatellites();
 
-            foreach (var gs in groundStations)
-            {
-                var gsInstance = Instantiate(Sputnik);
-                gsInstance.name = gs.ObjectId;
-                //var geoObject = gsInstance.AddComponent<GeoObject>();
-                //geoObject.SetCoordinates(gs.po.Latitude, gs.Location.Longitude);
-                var satellite = gsInstance.AddComponent<SatelliteObject>();
-                satellite.Init(gs, EarthCenter);
-                satellite.OnStationSelected(OnSatelliteSelected);
+            //foreach (var gs in groundStations) {
+            //    var gsInstance = Instantiate(Sputnik);
+            //    gsInstance.name = gs.ObjectId;
 
-                c++;
+            //    var satellite = gsInstance.AddComponent<SatelliteObject>();
+            //    satellite.Init(gs, EarthCenter);
+            //    satellite.OnStationSelected(OnSatelliteSelected);
 
-                if (c > 100) {
-                    break;
-                }
+            //    _statellits.Add(gs.ObjectId, satellite);
+            //}
+        }
 
-                //LaunchSputnik(gs);
-            }
+        public void UndohilightObject(string id)
+        {
+            _statellits[id]?.UndohilightObject();
+        }
+
+        public void HilightObject(string id)
+        {
+            _statellits[id]?.HilightObject();
         }
 
         private void OnSatelliteSelected(Satellite satellite)
@@ -53,15 +53,5 @@ namespace Assets.Scripts
         {
             _sputnikSelectedEvent.AddListener(handler);
         }
-
-        //private void LaunchSputnik(Satellite satellite)
-        //{
-        //    var sputnik = Instantiate(Sputnik);
-
-        //    var sputnikController = sputnik.GetComponent<SatelliteObject>();
-
-        //    sputnikController.Init(satellite, EarthCenter);
-        //    sputnikController.OnStationSelected(_sputnikSelectedEvent.Invoke);
-        //}
     }
 }

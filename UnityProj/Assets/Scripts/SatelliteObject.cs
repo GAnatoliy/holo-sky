@@ -19,6 +19,13 @@ namespace Assets.Scripts
 
         [SerializeField] private float _radius = 50f;
 
+        private Color _defaultColor;
+
+        private void Aweke()
+        {
+            _defaultColor = GetComponent<Renderer>().material.color;
+        }
+
         private void Start()
         {
             GetComponent<Interactable>().OnClick.AddListener(StationSelected);
@@ -28,8 +35,6 @@ namespace Assets.Scripts
         {
             _model = model;
             _earth = earthTransform;
-
-            _launched = true;
         }
 
         public void OnStationSelected(UnityAction<Satellite> handler)
@@ -37,21 +42,19 @@ namespace Assets.Scripts
             _satelliteSelectedEvent.AddListener(handler);
         }
 
+        public void UndohilightObject()
+        {
+            //GetComponent<Renderer>().material.color = _defaultColor;
+        }        
+        
+        public void HilightObject()
+        {
+            //GetComponent<Renderer>().material.color = Color.red;
+        }
+
         private void StationSelected()
         {
             _satelliteSelectedEvent.Invoke(_model);
-        }
-
-        void Update()
-        {
-            if (_launched)
-            {
-                _angle += Time.deltaTime;
-
-                var x = Mathf.Cos(_angle * _speed) * _radius;
-                var z = Mathf.Sin(_angle * _speed) * _radius;
-                transform.position = new Vector3(x, 0, z) + new Vector3(_earth.position.x, _earth.position.y, _earth.position.z);
-            }
         }
     }
 }

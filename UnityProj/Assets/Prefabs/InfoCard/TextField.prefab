@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 4975652992556988032}
   - component: {fileID: 2960740898288645744}
   m_Layer: 5
-  m_Name: TextField 2
+  m_Name: TextField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,7 +351,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 165.91496, y: 0}
-  m_SizeDelta: {x: 291.82993, y: 0}
+  m_SizeDelta: {x: 291.82993, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4975652992556988032
 MonoBehaviour:

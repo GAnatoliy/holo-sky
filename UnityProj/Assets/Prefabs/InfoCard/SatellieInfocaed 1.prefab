@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
-  m_VerticalFit: 1
+  m_VerticalFit: 2
 --- !u!114 &-8799875442724767929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,6 +636,7 @@ MonoBehaviour:
   _content: {fileID: 224765342135236099}
   _textFiled: {fileID: 4221429121191832803, guid: a4e375815b2246e46909d88fdd5a0cae,
     type: 3}
+  _descriptoin: {fileID: 0}
   _title: {fileID: 9151075288728778599}
   _image: {fileID: 5963614382874904440}
   OnCloseInfoCard:
