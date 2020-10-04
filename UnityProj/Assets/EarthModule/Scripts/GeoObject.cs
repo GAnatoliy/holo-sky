@@ -25,9 +25,10 @@ public class GeoObject : MonoBehaviour
     {
         var lat = Mathf.Clamp((float) latitude, -90, 90);
         var lon = Mathf.Clamp((float) longitude, -180, 180);
-
-        var localPos = Quaternion.Euler(new Vector3(-lat, -lon)) * new Vector3(0, 0, 20 + (float)altitude);
+        var localPos = Quaternion.Euler(new Vector3(-lat, -lon)) * new Vector3(0, 0, 20f  + (float)altitude);
 
         transform.localPosition = localPos;
+
+        transform.LookAt(transform.parent.position);
     }
 }
