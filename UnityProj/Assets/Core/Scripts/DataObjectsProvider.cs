@@ -88,30 +88,44 @@ namespace Assets.Core.Scripts
         private const string GroundStationsResourcePath = "data/groundstations";
         private const string SatellitesResourcePath = "data/spacetrackpayloads";
 
+        private List<GroundStation> _groundStations = null;
+        private List<Satellite> _satellites = null;
+
+
         public List<GroundStation> GetGroundStations()
         {
+            if (_groundStations != null) {
+                return _groundStations.ToList();
+            }
+
             var groundStationsTextFile = Resources.Load<TextAsset>(GroundStationsResourcePath);
             string groundStationsJson = groundStationsTextFile.text;
 
             var groundStations = JsonUtility.FromJson<GroundStationsDto>(groundStationsJson);
 
-            return groundStations.GroundStations.Select(dto => new GroundStation {
+            _groundStations = groundStations.GroundStations.Select(dto => new GroundStation {
                 Id = dto.Id,
                 Name = dto.Name,
                 Location = new GeoCoordinate(dto.Location.Latitude, dto.Location.Longitude),
                 Description = dto.Description,
                 ImageUrl = dto.ImageUrl
             }).ToList();
+
+            return _groundStations;
         }
 
         public List<Satellite> GetSatellites()
         {
+            if (_satellites != null) {
+                return _satellites.ToList();
+            }
+
             var satellitesTextFile = Resources.Load<TextAsset>(SatellitesResourcePath);
             string satellitesJson = satellitesTextFile.text;
 
             var satellites = JsonUtility.FromJson<SattelitesDto>(satellitesJson);
 
-            return satellites.data.Select(dto => new Satellite
+            _satellites = satellites.data.Select(dto => new Satellite
             {
                 CcsdsOmmVers = dto.CCSDS_OMM_VERS,
                 Comment = dto.COMMENT,
@@ -156,6 +170,8 @@ namespace Assets.Core.Scripts
                 ImageUrl = dto.IMAGE_URL,
                 Description = dto.DESCRIPTION
             }).ToList();
+
+            return _satellites;
         }
     }
 }

@@ -56,6 +56,7 @@ namespace Assets.Core.Scripts
         {
             var tleISS = ParserTLE.parseTle(TleLine1, TleLine2, TleLine0);
             var currentTime = new EpochTime(DateTime.UtcNow);
+            // TODO: use sdp4 for satellites with medium/high orbit.
             var data = SatFunctions.getSatPositionAtTime(tleISS, currentTime, Sgp4.wgsConstant.WGS_84);
             var secondsFromStart = (currentTime.getEpoch() - Math.Truncate(currentTime.getEpoch())) * 24 * 60 * 60;
             var omega = OMEGA_E * secondsFromStart;
