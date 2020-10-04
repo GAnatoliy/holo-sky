@@ -1,5 +1,8 @@
 ﻿using Assets.Core.Scripts;
+using Assets.Scripts;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EarthSateliteLoader : MonoBehaviour
 {
@@ -8,6 +11,10 @@ public class EarthSateliteLoader : MonoBehaviour
     public SphereCollider EarthCollider;
 
     public const float EARTH_RADIUS_IN_METERS = 6378137;
+
+    private SatellitedSelectEvent _sputnikSelectedEvent = new SatellitedSelectEvent();
+
+    private Dictionary<string, SatelliteObject> _statellits = new Dictionary<string, SatelliteObject>();
 
     private void Start()
     {
@@ -25,9 +32,27 @@ public class EarthSateliteLoader : MonoBehaviour
             var satelite = CreateSatelite($"{sat.ObjectName}");
             var sateliteData = sat.GetGeodeticCoordinateNow();
 
+
+            var satellite = satelite.gameObject.AddComponent<SatelliteObject>();
+            satellite.Init(sat);
+            satellite.OnStationSelected(OnSatelliteSelected);
+
+            _statellits.Add(sat.ObjectId, satellite);
+
+
             var altitude = sateliteData.Altitude / (EARTH_RADIUS_IN_METERS / EarthCollider.radius);
             satelite.SetCoordinates(sateliteData.Latitude, sateliteData.Longitude, altitude);
         }
+    }
+
+    private void OnSatelliteSelected(Satellite satellite)
+    {
+        _sputnikSelectedEvent.Invoke(satellite);
+    }
+
+    public void SatelliteSelected(UnityAction<Satellite> handler)
+    {
+        _sputnikSelectedEvent.AddListener(handler);
     }
 
     private GeoObject CreateSatelite(string name)
@@ -37,6 +62,7 @@ public class EarthSateliteLoader : MonoBehaviour
         satelite.name = !string.IsNullOrEmpty(name) ? name : "Satelite";
         var sateliteObj = satelite.AddComponent<GeoObject>();
         sateliteObj.EarthObjectRadius = EarthCollider.radius;
+
         return sateliteObj;
     }
 }

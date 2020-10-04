@@ -27,7 +27,7 @@ namespace Assets.Scripts
                 gsInstance.name = gs.ObjectId;
 
                 var satellite = gsInstance.AddComponent<SatelliteObject>();
-                satellite.Init(gs, EarthCenter);
+                satellite.Init(gs);
                 satellite.OnStationSelected(OnSatelliteSelected);
 
                 _statellits.Add(gs.ObjectId, satellite);

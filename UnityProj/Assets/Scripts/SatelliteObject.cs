@@ -13,7 +13,6 @@ namespace Assets.Scripts
 
         private bool _launched;
         private float _angle;
-        private Transform _earth;
 
         [SerializeField] private float _speed = 0.2f;
 
@@ -31,10 +30,9 @@ namespace Assets.Scripts
             GetComponent<Interactable>().OnClick.AddListener(StationSelected);
         }
 
-        public void Init(Satellite model, Transform earthTransform)
+        public void Init(Satellite model)
         {
             _model = model;
-            _earth = earthTransform;
         }
 
         public void OnStationSelected(UnityAction<Satellite> handler)

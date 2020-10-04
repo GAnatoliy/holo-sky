@@ -15,7 +15,7 @@ namespace Assets.Scripts
         [SerializeField]
         private GameObject _infoCardPrefab;
 
-        private SatellitsManager satellitManager;
+        private EarthSateliteLoader satellitManager;
         private GroundStationsManager  _groundStationManager;
 
         private GameObject _instantedInfoCard;
@@ -25,9 +25,9 @@ namespace Assets.Scripts
         public GameObject Earth;
 
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
-            satellitManager = GetComponent<SatellitsManager>();
+            satellitManager = GetComponent<EarthSateliteLoader>();
             satellitManager.SatelliteSelected(CreateInfoCard);
 
             _groundStationManager = GetComponent<GroundStationsManager>();
@@ -45,7 +45,7 @@ namespace Assets.Scripts
 
             infoCard.Init(model);
             infoCard.OnCloseInfoCard.AddListener(() => {
-                satellitManager.UndohilightObject(model.ObjectId);
+                //satellitManager.UndohilightObject(model.ObjectId);
                 Destroy(_instantedInfoCard.gameObject);
             });
 

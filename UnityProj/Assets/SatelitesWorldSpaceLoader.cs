@@ -1,7 +1,9 @@
 ﻿using Assets.Core.Scripts;
+using Assets.Scripts;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SatelitesWorldSpaceLoader : MonoBehaviour
 { 
@@ -11,7 +13,11 @@ public class SatelitesWorldSpaceLoader : MonoBehaviour
 
     public const float EARTH_RADIUS_IN_METERS = 6378137;
 
-    private List<GameObject> _satelites = new List<GameObject>();   
+    private List<GameObject> _satelites = new List<GameObject>();
+
+    private Dictionary<string, SatelliteObject> _statellits = new Dictionary<string, SatelliteObject>();
+
+    private SatellitedSelectEvent _sputnikSelectedEvent = new SatellitedSelectEvent();
 
     public void ShowSatelitesInPoint(Vector3 point)
     {
@@ -26,20 +32,34 @@ public class SatelitesWorldSpaceLoader : MonoBehaviour
 
         var cameraMain = Camera.main.transform;
 
-        var positions = new Vector3[3]
-        {
+        var positions = new Vector3[3] {
             cameraMain.forward + new Vector3(40f, 7f, 30f),
             cameraMain.forward + new Vector3(25f, 7f, 30f),
             cameraMain.forward + new Vector3(5f, 7f, 20f),
         };
 
-        for(var i = 0; i < satelites.Length; i++)
-        {           
+        for (var i = 0; i < satelites.Length; i++) {
             var worldSatelite = CreateWorldSatelite($"{satelites[i].ObjectName}");
             worldSatelite.transform.position = positions[i];
+
+
+            var satellite = worldSatelite.AddComponent<SatelliteObject>();
+            satellite.Init(satelites[i]);
+            satellite.OnStationSelected(OnSatelliteSelected);
+
+            _statellits.Add(satelites[i].ObjectId, satellite);
         }
     }
 
+    private void OnSatelliteSelected(Satellite satellite)
+    {
+        _sputnikSelectedEvent.Invoke(satellite);
+    }
+
+    public void SatelliteSelected(UnityAction<Satellite> handler)
+    {
+        _sputnikSelectedEvent.AddListener(handler);
+    }
 
     private GameObject CreateWorldSatelite(string name)
     {
