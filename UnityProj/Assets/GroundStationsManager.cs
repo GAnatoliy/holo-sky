@@ -5,6 +5,7 @@ public class GroundStationsManager : MonoBehaviour
 {
     public GameObject GroundStationPrefab;
     public Transform Container;
+    public SphereCollider EarthCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,9 @@ public class GroundStationsManager : MonoBehaviour
             var gsInstance = Instantiate(GroundStationPrefab);
             gsInstance.name = gs.Id;
             gsInstance.transform.SetParent(Container, false);
-            gsInstance.AddComponent<GeoObject>().SetCoordinates(gs.Location.Latitude, gs.Location.Longitude);
+            var geoObj = gsInstance.AddComponent<GeoObject>();
+            geoObj.EarthObjectRadius = EarthCollider.radius;
+            geoObj.SetCoordinates(gs.Location.Latitude, gs.Location.Longitude);
         }        
     }
 }

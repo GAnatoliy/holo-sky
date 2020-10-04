@@ -7,11 +7,13 @@ public class SatelitesManager : MonoBehaviour
     public GameObject SatelitePrefab;
     public Transform Container;
     public Transform Origin;
+    public SphereCollider EarthCollider;
 
     public const float EARTH_RADIUS_IN_METERS = 6378137;
 
     private List<GeoObject> _satelites = new List<GeoObject>();
 
+    // Temporary satelites coordinates stub
     private List<Vector2> _stubSatelites = new List<Vector2>
     {
         new Vector2(47.583204f, 29.588764f),
@@ -21,6 +23,8 @@ public class SatelitesManager : MonoBehaviour
 
     public void ShowSatelitesInPoint(Vector3 point)
     {
+        RemoveAllSatelites();
+
         var local = Origin.transform.InverseTransformPoint(point);
         var latLon = ToSpherical(local);
 
@@ -32,7 +36,7 @@ public class SatelitesManager : MonoBehaviour
             var convertedSpherical = new GeoCoordinate(latLon.x, latLon.y);
 
             var distance = GeoCoordinate.Distance(sateliteCoordinate, convertedSpherical);
-            var altitude = Mathf.Clamp((float)distance / 1000 / 10000, 1, 10);
+            var altitude = Mathf.Clamp((float)distance / 1000 / 5000, 1, 20);
 
             satelite.SetCoordinates(sat.x, sat.y, altitude);
         }
@@ -44,10 +48,22 @@ public class SatelitesManager : MonoBehaviour
         satelite.transform.SetParent(Container, false);
         satelite.name = !string.IsNullOrEmpty(name) ? name : "Satelite";
         var sateliteObj = satelite.AddComponent<GeoObject>();
+        sateliteObj.EarthObjectRadius = EarthCollider.radius;
         _satelites.Add(sateliteObj);
 
         return sateliteObj;
     }
+
+    private void RemoveAllSatelites()
+    {
+        foreach(var sat in _satelites)
+        {
+            Destroy(sat);
+        }
+
+        _satelites.Clear();
+    }
+
 
     //https://gamedev.stackexchange.com/questions/149109/calculating-the-latitude-longitude-of-a-raycast-hit-point-on-a-sphere
     public static Vector2 ToSpherical(Vector3 position)

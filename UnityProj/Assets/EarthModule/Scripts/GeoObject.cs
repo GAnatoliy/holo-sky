@@ -6,6 +6,8 @@ public class GeoObject : MonoBehaviour
     public float Longitude;
     public Transform Origin;
 
+    public float EarthObjectRadius { get; set; } = 20f;
+
     // Update is called once per frame
     //void Update()
     //{
@@ -25,7 +27,7 @@ public class GeoObject : MonoBehaviour
     {
         var lat = Mathf.Clamp((float) latitude, -90, 90);
         var lon = Mathf.Clamp((float) longitude, -180, 180);
-        var localPos = Quaternion.Euler(new Vector3(-lat, -lon)) * new Vector3(0, 0, 20f  + (float)altitude);
+        var localPos = Quaternion.Euler(new Vector3(-lat, -lon)) * new Vector3(0, 0, EarthObjectRadius  + (float)altitude);
 
         transform.localPosition = localPos;
 
