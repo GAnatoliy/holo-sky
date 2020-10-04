@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EarthInteractionHandler : MonoBehaviour
 {
-    public SatelitesManager SatelitesManager;
+    public SatelitesWorldSpaceLoader SatelitesManager;
     public EarthRotationAccelerator EarthRotationAccelerator;
     public EarthSpin EarthSpin;
     private GameObject _touchPoint;
