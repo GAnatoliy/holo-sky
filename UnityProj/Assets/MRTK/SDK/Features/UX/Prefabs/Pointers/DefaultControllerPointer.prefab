@@ -109,6 +109,7 @@ LineRenderer:
   m_MotionVectors: 2
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -120,6 +121,7 @@ LineRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -325,13 +327,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a969079783d81144bce7e89bd03ac89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handedness: 1
   destroyOnSourceLost: 0
   useSourcePoseData: 0
   poseAction:
     id: 4
     description: Pointer Pose
     axisConstraint: 7
+  handedness: 1
   cursorPrefab: {fileID: 1000012072213228, guid: 5b3e2856904e43c680f84f326861032a,
     type: 3}
   disableCursorOnStart: 0
@@ -348,7 +350,7 @@ MonoBehaviour:
   requiresHoldAction: 0
   requiresActionBeforeEnabling: 0
   overrideGlobalPointerExtent: 0
-  pointerExtent: 10
+  pointerExtent: 70
   defaultPointerExtent: 5.5
   sphereCastRadius: 0.1
   LineColorSelected:
