@@ -14,9 +14,9 @@ public class Ellipse : MonoBehaviour
     public int resolution = 1000;
     private Vector3[] positions;
 
-    void Update()
+    void Start()
     {
-        positions = CreateEllipse(a, b, Cx, Cy, Cz, z, resolution);
+        positions = CreateEllipse(a, b, Cx, Cy, Cz, z, y, x, resolution);
         var lr = GetComponent<LineRenderer>();
         lr.positionCount = (resolution + 1);
         for (int i = 0; i <= resolution; i++) {
@@ -24,12 +24,12 @@ public class Ellipse : MonoBehaviour
         }
     }
 
-    Vector3[] CreateEllipse(float a, float b, float Cx, float Cy, float Cz, float theta, int resolution)
+    public static Vector3[] CreateEllipse(float a, float b, float Cx, float Cy, float Cz, float angleZ, float angleY, float angleX, int resolution)
     {
-        positions = new Vector3[resolution + 1];
-        var qX = Quaternion.AngleAxis(90 + x, Vector3.right);
-        var qZ = Quaternion.AngleAxis(theta, Vector3.forward);
-        var qY = Quaternion.AngleAxis(y, Vector3.up);
+        var positions = new Vector3[resolution + 1];
+        var qX = Quaternion.AngleAxis(90 + angleX, Vector3.right);
+        var qZ = Quaternion.AngleAxis(angleZ, Vector3.forward);
+        var qY = Quaternion.AngleAxis(angleY, Vector3.up);
         var center = new Vector3(Cx, Cy, Cz);
         for (int i = 0; i <= resolution; i++)
         {
@@ -38,5 +38,23 @@ public class Ellipse : MonoBehaviour
             positions[i] = qX * qY * qZ * positions[i] + center;
         }
         return positions;
+    }
+
+    public static GameObject CreateEllipse(string id, Transform parent, Vector3 center, float a, float b, float xAngle, float yAngle, float zAngle, int resolution)
+    {
+        var go = new GameObject(id);
+
+
+        go.transform.SetParent(parent);
+        var lineRenderer = go.AddComponent<LineRenderer>();
+        var coords = CreateEllipse(a, b, center.x, center.y, center.z, zAngle, yAngle, xAngle, resolution);
+        lineRenderer.positionCount = (resolution + 1);
+        for (int i = 0; i <= resolution; i++)
+        {
+            lineRenderer.SetPosition(i, coords[i]);
+        }
+
+
+        return go;
     }
 }
